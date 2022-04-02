@@ -1,0 +1,85 @@
+<!DOCTYPE html> <!-- Bu kısım HTML5'i ifade ediyor -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3 Schools' HTML Course</title>
+    <link rel="stylesheet" href="main.css"> <!-- Biçimlendirmeleri alacağımız dosya -->
+</head>
+<body class="dark-theme">
+    <h1>ÖRNEKLER (Heading 1: First)</h1>
+    <h2>ÖRNEKLER (Heading 2)</h2>
+    <h3>ÖRNEKLER (Heading 3)</h3>
+    <h4>ÖRNEKLER (Heading 4): Arama motorları "heading"lere bakarak indeksleme yapıyor...</h4>
+    <h4 style="font-size:15px;">ÖRNEKLER (<u><b>Değiştirilmiş</b></u> Heading 4)</h4>
+    <h5>ÖRNEKLER (Heading 5)</h5>
+    <h6>ÖRNEKLER (Heading 6: Last)</h6> 
+    <p id="genInfo"><<< Genel biçimlendirme kuralları için main.css dosyasını inceleyiniz >>></p>
+    <hr>
+
+    <p id="msg01"><u>Örnek #01:</u> Liste Ekleme (id ismi "msg01" olduğu için yazı tipi farklı)</p>
+    <ul>
+        <li class="list01">main.css'deki genel kurallar gereği bu liste elemanının başında "kare" var (Class ismi: list01)</li>
+        <li>Bu liste elemanının class ismi yok o yüzden genel kural gereği başında "daire" var. (li element kuralı)</li>
+    </ul>
+    <hr>
+
+    <p><u>Örnek #02:</u> Resim ve Link Ekleme. Renkli Yazı Yazma</p>   
+    <ul>
+        <!-- <img id="imgProfile" src="resources/ta2lsm.jpg" alt="TA2LSM" width="142" height="142" align="left">  -->
+        <img id="imgProfile" src="resources/ta2lsm.jpg" alt="TA2LSM" width="140" height="140"> 
+        <p>Yukarıdaki resim "relative link" olarak verildi (resources/ta2lsm.jpg)</p>
+        <img id="imgProfile" src="https://cdn.pixabay.com/photo/2013/07/19/00/18/splashing-165192_960_720.jpg" alt="Su" width="220" height="140"> 
+        <p>Yukarıdaki resim "absolute link" olarak verildi (başka bir web sitesinden direkt link olarak)</p>   
+        <p>Image ayarlanırken "alt" parametresi resim yüklenemezse resim yerine yazacak yazıdır. Burası "kırmızı" olarak yazılacaktır...</p> 
+        <li><a href="https://github.com/TA2LSM">TA2LSM, GitHub sayfasını ziyaret et...</a></li>
+    </ul>
+    <hr>
+    <p><u>Örnek #03:</u> İpucu Bilgisi Verilerek Renkli Yazı Yazılması</p>   
+    <p style="color:red" title="'TA2LSM' Rocks!"><<< İpucunu görmek için bu yazının üstüne geliniz >>></p>
+    <hr>
+
+    <p><u>Örnek #04:</u> Paragrafta Alt Satıra Geçmek, Metinler Arasına Çizgi Çekmek</p>   
+    <p>Buradaki metin baya bir uzun olarak yazıldı. Normalde paragrafta <br> ENTER ile alt satıra da geçsek
+       HTML'de bunun bir anlamı yoktur. <br> Alt satıra heçmek için "< br >" kullanılır. Düz çizgi ile metin
+       bloklarını <br> ayırmak içinse "< hr >" kullanılır.</p>  
+    <pre>
+    Ayrıca burada yazılan yazıda olduğu gibi ENTER tuşunun
+    -Windows'ta: CRLF (\r\n), MAC'te: CR (\r)- işlevinin
+    olması için "< pre >" kullanılır. (preformatted text)
+    </pre>
+    <hr>
+
+    <p><u>Örnek #05:</u> Stiller</p>  
+    <h3 style="background-color:blue;"><b>Bu yazı, başlık 3 olarak yazıldı. Arka planı mavi renk. Temaya göre yazı rengi değişiyor.</b></h3>
+    <h3 class="customHeading01"><b>Bu yazı, başlık 3 olarak mavi renk üzerine sarı olarak yazıldı ama CSS dosyasındaki default <br>
+        yazı rengi (* {...} kısmı ) yüzünden istediğimiz gibi olmuyor! </b></h3>
+    <h3><span class="customHeading02"><b>Bu yazı, başlık 3 olarak <span class="customText01">yeşil renk üzerine siyah</span> olarak yazıldı ama CSS dosyasındaki default <br>
+        yazı rengi (* {...} kısmı ) yüzünden istediğimiz gibi olmuyor! Renk bilgisi yazısı normalin 1,5 katı olarak seçildi.</b></span></h3>
+    <p style="background-color:tomato;"><u>Bu paragrafın arka planı domates rengi ve altı çizgili olarak yazıldı</u>.</p>
+    <p>Bu yazının <span style="text-align: center; background-color: red; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">"burası"</span> kırmızı üzerine beyaz olarak yazıldı.
+        Renkli kısım temayla değişmiyor. ("span" kullanıldı) Yazı tipi "Segoe UI" ailesi seçildi. Metin ortalandı ama işlev görmedi.</p>
+    <hr>
+
+    <p><u>Örnek #06:</u> ...</p>  
+    <hr>
+    <p><u>Örnek #07:</u> ...</p>  
+    <hr>
+    <p><u>Örnek #08:</u> ...</p>  
+    <hr>
+    <p><u>Örnek #09:</u> ...</p>  
+    <hr>
+    <p><u>Örnek #10:</u> ...</p>  
+    <hr>
+
+    <div>
+        <button class="btnThemeSelect">Set Light Theme</button>
+    </div>    
+
+    <!-- <script>alert('W3 Schools HTML-CSS Kursu Test HTML Dosyası (Semih ŞENOL / 04.02.2022)')</script> -->
+    <script src="app.js"></script> <!-- arka plan kodları alacağımız dosya -->
+    <noscript>You need to enable JavaScript to view the full site.</noscript> 
+    <!--Eğer script hatası oluşursa bu mesaj görüntülenecek -->
+</body>
+</html>
