@@ -23,118 +23,191 @@
     <h6>ÖRNEKLER (Heading 6: Last)</h6> 
     <p id="genInfo">*** Genel biçimlendirme kuralları için main.css dosyasını inceleyiniz. Yukarıdaki buton ile tema değiştirme işlemi app.js dosyasında yapılıyor.</p>
     <hr>
+    <br>
 
-    <p id="msg01"><u>Örnek #01:</u> Liste Ekleme (id ismi "msg01" olduğu için yazı tipi farklı)</p>
-    <ul>
-        <li class="list01">main.css'deki genel kurallar gereği bu liste elemanının başında "kare" var (Class ismi: "list01")</li>
-        <li>Bu liste elemanının class ismi yok o yüzden genel kural gereği başında "daire" var. ("li" element kuralı)</li>
-    </ul>
-    <hr>
+    <div>
+        <p id="msg01"><u>Örnek #01:</u> Liste Ekleme (id ismi "msg01" olduğu için yazı tipi farklı)</p>
+        <!-- unordered list: sonradan erişilip sıralaması vs değiştirilemeyen liste. Ordered list'te bu işlemler yapılabiliyor. -->
+        <!-- Bir de nested list var. -->
+        <ul>
+            <li class="list01">main.css'deki genel kurallar gereği bu liste elemanının başında "kare" var (Class ismi: "list01")</li>
+            <li>Bu liste elemanının class ismi yok o yüzden genel kural gereği başında "daire" var. ("li" element kuralı)</li>
+        </ul>
+    </div>
 
-    <p><u>Örnek #02:</u> Resim ve Link Ekleme. Renkli Yazı Yazma</p>   
-    <ul>
-        <!-- <img id="imgProfile" src="resources/ta2lsm.jpg" alt="TA2LSM" width="142" height="142" align="left">  -->
-        <img id="imgProfile" src="resources/ta2lsm.jpg" alt="TA2LSM" width="140" height="140"> 
-        <p>Yukarıdaki resim "relative link" olarak verildi (resources/ta2lsm.jpg)</p>
-        <img id="imgProfile" src="https://cdn.pixabay.com/photo/2013/07/19/00/18/splashing-165192_960_720.jpg" alt="Su" width="220" height="140"> 
-        <p>Yukarıdaki resim "absolute link" olarak verildi (başka bir web sitesinden direkt link olarak)</p>   
-        <p>Image ayarlanırken "alt" parametresi resim yüklenemezse resim yerine yazacak yazıdır. Burası "kırmızı" olarak yazılacaktır...</p> 
-        <li><a href="https://github.com/TA2LSM">TA2LSM, GitHub sayfasını ziyaret et...</a></li>
-    </ul>
-    <hr>
-    <p><u>Örnek #03:</u> İpucu Bilgisi Verilerek Renkli Yazı Yazılması</p>   
-    <p style="color:red" title="'TA2LSM' Rocks!"><<< İpucunu görmek için bu yazının üstüne geliniz >>></p>
-    <hr>
+    <div>
+        <p><b><u>Örnek #02:</u></b> Resim, Link Ekleme. E-mail linki verme, yeni sayfalara yönlendirme</p>   
+        <ul>         
+            <p>
+            <!-- <img src="resources/ta2lsm.jpg" alt="TA2LSM Profil Resmi" width="140" height="140" align="left">  -->
+            <img src="resources/ta2lsm.jpg" alt="TA2LSM Profil Resmi" width="140" height="140"> 
+            <img src="resources/html5.gif" alt="HTML5 GIF" style="width:140px;height:140px;">
+                <br>
+                Yukarıdaki resimler "relative link" olarak verildi (resources/...)
+            </p>
+            
+            <p>
+            <img src="resources/react.gif" alt="React Native" style="float:left; width:150px; height: 75px;">
+                Yandaki resim "relative link" olarak verildi <br>
+                ve bu metnin yanına sola hizzalandı. (floating) <br>
+                Böylece bu metin de resmin yanına yazılabildi. <br>
+                Metin yeteri kadar uzun olmazsa resim hizzalaması <br>
+                kayıyor! Buna dikkat etmek gerekiyor...
+            </p>
 
-    <p><u>Örnek #04:</u> Paragrafta Alt Satıra Geçmek, Metinler Arasına Çizgi Çekmek</p>   
-    <p>Buradaki metin baya bir uzun olarak yazıldı. Normalde paragrafta <br> ENTER ile alt satıra da geçsek
-       HTML'de bunun bir anlamı yoktur. <br> Alt satıra heçmek için "< br >" kullanılır. Düz çizgi ile metin
-       bloklarını <br> ayırmak içinse "< hr >" kullanılır.</p>  
+            <p><img src="https://cdn.pixabay.com/photo/2013/07/19/00/18/splashing-165192_960_720.jpg" alt="Sıçrayan Su Resmi" width="220" height="140">
+                <br>Yukarıdaki resim "absolute link" olarak verildi (başka bir web sitesinden link olarak)
+                <br>Image ayarlanırken "alt" parametresi resim yüklenemezse resim yerine yazacak yazıdır.
+            </p> 
+
+            <p> Yazı alanı ekleme: <br>
+                <textarea style="color:black; resize: none;" name="TA" id="txtAr01" cols="100" rows="4">Bu kısım yazı alanıdır. (textarea) 100 karakter genişlikli ve 4 satır olarak ayarlanmıştır.
+                </textarea>
+            </p>
+
+            <p>Link biçimlendirmeleri için main.css içinde "a" imlemesi ile başlayan kısımları inceleyiniz.</p>
+            <ul> "Absolute link" verme:
+                <li><a href="https://github.com/TA2LSM" target="_self">TA2LSM, GitHub sayfasını ziyaret et (Aynı sayfa veya sekmede) >>></a></li>
+                <li><a href="https://github.com/TA2LSM" target="_blank">TA2LSM, GitHub sayfasını ziyaret et (Yeni sayfa veya sekmede) >>></a></li>
+                <li><a href="https://github.com/TA2LSM" target="_parent">TA2LSM, GitHub sayfasını ziyaret et (Ana çerçevede) >>></a></li>
+                <li><a href="https://github.com/TA2LSM" target="_top">TA2LSM, GitHub sayfasını ziyaret et (Aynı sayfa veya sekmenin gövdesinde (body)) >>></a></li>
+                <br>
+                "Relative link" verme:
+                <li><a href="resources/message.html" target="_blank">Relative link olarak verilmiş başka bir sayfaya gitmek için buraya,
+                    aşağıdaki resme ya da butonlara tıklayınız...</a></li>
+                <li><a href="resources/message.html" title="Mesaj Sayfasına git..." target="_blank">Yeni sayfada "relative link"e gitmek için tıklayınız. (üstüne gelince açıklama görüntülenir)</a></li>
+                <br>
+                <a href="resources/message.html">
+                    <img src="resources/message.png" alt="Mesaj Sayfası" style="background-color: white; width:60px; height:60px;">
+                </a> 
+                <br>
+                <p style="font-size: small;">Aynı Sayfada / Ayrı Sayfada</p>
+                <button style="color:black" onclick="document.location='resources/message.html'">Mesaj Sayfası</button>
+                <!-- BİLGİ: Aşağıdaki kod pop-up olarak algılanıyor -->
+                <button style="color:black" onclick="window.open('resources/message.html','_blank')">Mesaj Sayfası</button> 
+                <br>
+                <br>
+                <li>E-mail linki vermek:  <a href="mailto:semihsenol@gmail.com">TA2LSM'ye mail at...</a></li>
+                <li>Sayfa içinde bir referans noktasına atlamak: Örnek #6'ya atlamak için <a href="#EX6">"tıklayınız..."</a></li>
+            </ul>       
+        </ul>
+    </div>
+  
+    <div>
+        <p><b><u>Örnek #03:</u></b> İpucu Bilgisi Verilerek Renkli Yazı Yazılması</p>  
+        <p style="color:red" title="'TA2LSM' Rocks!">*** İpucunu görmek için bu yazının üstüne geliniz. Burası "kırmızı" olarak yazılacaktır ***</p>
+    </div>
+
+    <div>
+        <p><b><u>Örnek #04:</u></b> Paragrafta Alt Satıra Geçmek, Metinler Arasına Çizgi Çekmek <br><br>  
+        Buradaki metin baya bir uzun olarak yazıldı. Normalde paragrafta <br> ENTER ile alt satıra da geçsek
+        HTML'de bunun bir anlamı yoktur. <br> Alt satıra heçmek için "< br >" kullanılır. Düz çizgi ile metin
+        bloklarını <br> ayırmak içinse "< hr >" kullanılır.  
+        </p> 
     <pre>
     Ayrıca burada yazılan yazıda olduğu gibi ENTER tuşunun
-    -Windows'ta: CRLF (\r\n), MAC'te: CR (\r)- işlevinin
+    ( Windows'ta: CRLF (\r\n), MAC'te: CR (\r) ) işlevinin
     olması için "< pre >" kullanılır. (preformatted text)
-    </pre>
-    <hr>
+    </pre>      
+    </div>
 
-    <p><u>Örnek #05:</u> "Inline" Stiller</p>  
-    <h3 style="background-color:blue;"><b>Bu yazı, başlık 3 olarak yazıldı. Arka planı mavi renk. Temaya göre yazı rengi değişiyor.</b></h3>
-    <h3 class="customHeading01"><b>Bu yazı, başlık 3 olarak mavi renk üzerine sarı olarak yazıldı ama CSS dosyasındaki default <br>
-        yazı rengi (* {...} kısmı ) yüzünden istediğimiz gibi olmuyor! </b></h3>
-    <h3><span class="customHeading02"><b>Bu yazı, başlık 3 olarak <span class="customText01">yeşil renk üzerine siyah</span> olarak yazıldı ama CSS dosyasındaki default <br>
-        yazı rengi (* {...} kısmı ) yüzünden istediğimiz gibi olmuyor! Renk bilgisi yazısı normalin 1,5 katı olarak seçildi.</b></span></h3>
-    <p style="background-color:tomato;"><u>Bu paragrafın arka planı domates rengi ve altı çizgili olarak yazıldı</u>.</p>
-    <p>Bu yazının <span style="text-align: center; background-color: red; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">"burası"</span> kırmızı üzerine beyaz olarak yazıldı.
-        Renkli kısım temayla değişmiyor. ("span" kullanıldı) Yazı tipi "Segoe UI" ailesi seçildi. Metin ortalandı ama işlev görmedi.</p>
-    <hr>
+    <div>
+        <p><b><u>Örnek #05:</u></b> "Inline" Stiller</p>  
+        <h3 style="background-color:blue;"><b>Bu yazı, başlık 3 olarak yazıldı. Arka planı mavi renk. Temaya göre yazı rengi değişiyor.</b></h3>
+        <h3 class="customHeading01"><b>Bu yazı, başlık 3 olarak mavi renk üzerine sarı olarak yazıldı ama CSS dosyasındaki default <br>
+            yazı rengi (* {...} kısmı ) yüzünden istediğimiz gibi olmuyor! </b></h3>
+        <h3><span class="customHeading02"><b>Bu yazı, başlık 3 olarak <span class="customText01">yeşil renk üzerine siyah</span> olarak yazıldı ama CSS dosyasındaki default <br>
+            yazı rengi (* {...} kısmı ) yüzünden istediğimiz gibi olmuyor! Renk bilgisi yazısı normalin 1,5 katı olarak seçildi.</b></span></h3>
+        <p style="background-color:tomato;"><u>Bu paragrafın arka planı domates rengi ve altı çizgili olarak yazıldı</u>.</p>
+        <p>Bu yazının <span style="text-align: center; background-color: red; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">"burası"</span> kırmızı üzerine beyaz olarak yazıldı.
+            Renkli kısım temayla değişmiyor. ("span" kullanıldı) Yazı tipi "Segoe UI" ailesi seçildi. Metin ortalandı ama işlev görmedi.</p>
+    </div>
 
-    <p><u>Örnek #06:</u> Biçimlendirilmiş Yazılar</p>  
-    <ul>
-        <li><b>Kalın</b> ve <strong>Güçlü</strong> birbirine benziyor. Bir okuyucu varsa güçlü kısmı ona göre okunur.</li>
-        <li><i>İtalik</i> ve <em>Vurgulanan</em> birbirine benziyor. Bir okuyucu varsa vurgulanan kısmı ona göre okunur.</li>
-        <li>Ön tanımlı olarak sarı renk ile <mark style="background-color: blue; color: white;"> imlenmiş.</mark> Burada ön tanımlı renkleri değiştirdik.</li>
-        <li>Normalden <small>küçük</small> yazılmış</li>
-        <li><del>Silinmiş.</del> Bir düzeltme özellikle vurgulanmak istenirse kullanılır.</li>
-        <li><ins>Eklenmiş.</ins> Bir düzeltme özellikle vurgulanmak istenirse kullanılır. Silinmiş örneği ile beraber kullanılabilir.</li>
-        <li><sub>İndis</sub> olarak yazılmış</li>
-        <li><sup>Üstel</sup> olarak yazılmış</li>
-        <li>Aşağıdaki paragraf başka bir yerden <u>ALINTIDIR.</u> Tırnak ("...") için (q) kullanılır.
-        <blockquote cite="http://www.worldwildlife.org/who/index.html">
-            For 50 years, WWF has been protecting the future of nature.
-            The world's leading conservation organization,
-            WWF works in 100 countries and is supported by
-            <q>1.2 million members</q> in the United States and
-            close to 5 million globally.
-            </blockquote>
-        </li>
-        <li>Örneğin bir kısaltmanın açılımını üzerine gelince göstermek için: <abbr title="Tango Alfa Two Lima Sierra Mike">TA2LSM</abbr></li>
-        <li>Adres bilgisi vermek için:
-            <address>
-            <pre>
-                Semih ŞENOL
-                Elektronik ve Haberleşme Yüksek Mühendisi
-                Kocaeli Üniversitesi (Lisans)
-                Kocaeli Üniversitesi (Yüksek Lisans)
-                Arga Teknoloji San. ve Tic. Ltd. Şti. (Kurucu Ortak)
-            </pre>
-            </address>
-        </li>
-        <li>Birisi tarafından yapılmış bir işi referans göstermek için (cite) kullanılır. Browser'lar bunu genelde italik olarak gösterir.</li>
-        <br>
-        <img src="resources/img_the_scream.jpg" width="220" height="277" alt="The Scream">
-        <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>   
-        <li>Bir yazıyı tersten yazmak için mesela yandaki yazı HTML kodda "HİMES" olarak yazılsa da burada:
-             <mark style="background-color: blue; color: white;"><bdo dir="rtl">HİMES</bdo></mark> şeklinde gözüküyor.
-        </li>     
-    </ul>
-    <hr>
+    <div>
+        <p id="EX6"><b><u>Örnek #06:</u></b> Biçimlendirilmiş Yazılar</p>  
+        <ul>
+            <li><b>Kalın</b> ve <strong>Güçlü</strong> birbirine benziyor. Bir okuyucu varsa güçlü kısmı ona göre okunur.</li>
+            <li><i>İtalik</i> ve <em>Vurgulanan</em> birbirine benziyor. Bir okuyucu varsa vurgulanan kısmı ona göre okunur.</li>
+            <li>Ön tanımlı olarak sarı renk ile <mark style="background-color: blue; color: white;"> imlenmiş.</mark> Burada ön tanımlı renkleri değiştirdik.</li>
+            <li>Normalden <small>küçük</small> yazılmış</li>
+            <li><del>Silinmiş.</del> Bir düzeltme özellikle vurgulanmak istenirse kullanılır.</li>
+            <li><ins>Eklenmiş.</ins> Bir düzeltme özellikle vurgulanmak istenirse kullanılır. Silinmiş örneği ile beraber kullanılabilir.</li>
+            <li><sub>İndis</sub> olarak yazılmış</li>
+            <li><sup>Üstel</sup> olarak yazılmış</li>
+            <li>Aşağıdaki paragraf başka bir yerden <u>ALINTIDIR.</u> Tırnak ("...") için (q) kullanılır.
+            <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                For 50 years, WWF has been protecting the future of nature.
+                The world's leading conservation organization,
+                WWF works in 100 countries and is supported by
+                <q>1.2 million members</q> in the United States and
+                close to 5 million globally.
+                </blockquote>
+            </li>
+            <li>Örneğin bir kısaltmanın açılımını üzerine gelince göstermek için: <abbr title="Tango Alfa Two Lima Sierra Mike">TA2LSM</abbr></li>
+            <li>Adres bilgisi vermek için:
+                <address>
+                <pre>
+                    Semih ŞENOL
+                    Elektronik ve Haberleşme Yüksek Mühendisi
+                    Kocaeli Üniversitesi (Lisans)
+                    Kocaeli Üniversitesi (Yüksek Lisans)
+                    Arga Teknoloji San. ve Tic. Ltd. Şti. (Kurucu Ortak)
+                </pre>
+                </address>
+            </li>
+            <li>Birisi tarafından yapılmış bir işi referans göstermek için (cite) kullanılır. Browser'lar bunu genelde italik olarak gösterir.</li>
+            <br>
+            <img src="resources/img_the_scream.jpg" width="220" height="277" alt="The Scream">
+            <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>   
+            <li>Bir yazıyı tersten yazmak için mesela yandaki yazı HTML kodda "HİMES" olarak yazılsa da burada:
+                <mark style="background-color: blue; color: white;"><bdo dir="rtl">HİMES</bdo></mark> şeklinde gözüküyor.
+            </li>     
+        </ul>
+    </div>
 
-    <p><u>Örnek #07:</u> HTML Renkleri</p>  
-    <ul>
-        <li>VS Code Studio'da mesela "color:" ifadesi otomatik olarak tanınır ve renk için öneri kutusu, renk paleti ile beraber açılır.
-            Ön tanımlı renk istenmezse paletten renk seçilebilir. </li>
-        <li>Öntanımlı bazı renkler: Tomato, Orange, DodgerBlue, MediumSeaGreen, Gray, SlateBlue, Violet, LightGray</li>
-        <li>Üç farklı şekilde renk girilebilir: RGB, HEX ve HSL olarak. Opaklık verilmesi istenirse RGBA veya HSLA tercih edilir. (A: Alpha)
-            <pre>
-            * 16.777.216 (16M) farklı renk seçeneği vardır. ( 256<sup>3</sup> )
-            * HEX olarak giriş yapılacaksa FF(RED)  63(GREEN) 47(BLUE) tonları olarak düşünülmelidir.
-            * RGB'de değerler 0-255, HEX'te ise 00-FF arasında olabilir.
-            * Hue Saturation Lightness, HSL formatını ifade eder. İlk değer 0-359 arasında olabilir. Diğerleri yüzde olarak 0-100 arasındadır.
-            </pre>
-            <p style="color: rgb(255,99,71)">TEST METNİ -- rgb(255,99,71)</p>
-            <p style="color: #FF6347">TEST METNİ -- #FF6347</p>
-            <p style="color: hsl(9,100%,64%)">TEST METNİ -- hsl(9,100%,64%)</p>
-            <p style="color: rgba(255,99,71,0.75)">TEST METNİ -- rgba(255,99,71,0.75)</p>
-            <p style="color: hsla(9,100%,64%,0.75)">TEST METNİ -- hsla(9,100%,64%,0.75)</p>
-        </li>
-    </ul>
-    <hr>
-    <p><u>Örnek #08:</u> ...</p>  
-    <hr>
-    <p><u>Örnek #09:</u> ...</p>  
-    <hr>
-    <p><u>Örnek #10:</u> ...</p>  
-    <hr>
+    <div>
+        <p><b><u>Örnek #07:</u></b> HTML Renkleri</p>  
+        <ul>
+            <li>VS Code Studio'da mesela "color:" ifadesi otomatik olarak tanınır ve renk için öneri kutusu, renk paleti ile beraber açılır.
+                Ön tanımlı renk istenmezse paletten renk seçilebilir. </li>
+            <li>Öntanımlı bazı renkler: Tomato, Orange, DodgerBlue, MediumSeaGreen, Gray, SlateBlue, Violet, LightGray</li>
+            <li>Üç farklı şekilde renk girilebilir: RGB, HEX ve HSL olarak. Opaklık verilmesi istenirse RGBA veya HSLA tercih edilir. (A: Alpha)
+                <pre>
+                * 16.777.216 (16M) farklı renk seçeneği vardır. ( 256<sup>3</sup> )
+                * HEX olarak giriş yapılacaksa FF(RED)  63(GREEN) 47(BLUE) tonları olarak düşünülmelidir.
+                * RGB'de değerler 0-255, HEX'te ise 00-FF arasında olabilir.
+                * Hue Saturation Lightness, HSL formatını ifade eder. İlk değer 0-359 arasında olabilir. Diğerleri yüzde olarak 0-100 arasındadır.
+                </pre>
+                <p style="color: rgb(255,99,71)">TEST METNİ -- rgb(255,99,71)</p>
+                <p style="color: #FF6347">TEST METNİ -- #FF6347</p>
+                <p style="color: hsl(9,100%,64%)">TEST METNİ -- hsl(9,100%,64%)</p>
+                <p style="color: rgba(255,99,71,0.75)">TEST METNİ -- rgba(255,99,71,0.75)</p>
+                <p style="color: hsla(9,100%,64%,0.75)">TEST METNİ -- hsla(9,100%,64%,0.75)</p>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <p><b><u>Örnek #08:</u></b> Image Mapping İşlemi.<br><br>
+        Bir resim üzerinde "mapping" yaparak tıklanacak yerleri belirleme ve bu noktalardan link verme.
+        Aşağıdaki resimde bilgisayar, telefon ve kahvenin üstüne tıklayınız...
+        </p>  
+        <img src="resources/workplace.jpg" alt="Workplace" usemap="#workmap">
+        <map name="workmap">
+          <area shape="rect" coords="34,44,270,350" alt="Computer" href="resources/computer.htm" onclick="imgMappingFunc(1)">
+          <area shape="rect" coords="290,172,333,250" alt="Phone" href="resources/phone.htm" onclick="imgMappingFunc(2)">
+          <area shape="circle" coords="337,300,44" alt="Coffee" href="resources/coffee.htm" onclick="imgMappingFunc(3)">
+          <!-- poly (karmaşık eğimleri tanımlama) ve default olarak 2 tane daha shape var -->
+        </map>         
+    </div>
+
+    <div>
+        <p><b><u>Örnek #09:</u></b> ...</p>  
+    </div>
+
+    <div>
+        <p><b><u>Örnek #10:</u></b> ...</p>  
+    </div>
 
     <div>
         <button class="btnThemeSelect">Set Light Theme</button>
@@ -146,3 +219,6 @@
     <!--Eğer script hatası oluşursa bu mesaj görüntülenecek -->
 </body>
 </html>
+
+
+<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html_images_background.asp -->
