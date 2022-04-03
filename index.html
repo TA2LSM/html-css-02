@@ -5,23 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W3 Schools' HTML Course</title>
-    <link rel="stylesheet" href="main.css"> <!-- Biçimlendirmeleri alacağımız dosya -->
+    <link rel="stylesheet" href="css/main.css"> <!-- External olarak biçimlendirmeleri alacağımız dosya. (Head kısmına yazılır) -->
+    <!-- Burada yukarıdakine alternatif olarak internal olarak da aşağıdaki şekilde basit bir biçimlendirme yapmak mümkün -->
+    <!-- <style>
+        body {background-color: powderblue;}
+        h1   {color: blue;}
+        p    {color: red;}
+    </style> -->
 </head>
 <body class="dark-theme">
     <h1>ÖRNEKLER (Heading 1: First)</h1>
     <h2>ÖRNEKLER (Heading 2)</h2>
     <h3>ÖRNEKLER (Heading 3)</h3>
-    <h4>ÖRNEKLER (Heading 4): Arama motorları "heading"lere bakarak indeksleme yapıyor...</h4>
-    <h4 style="font-size:15px;">ÖRNEKLER (<u><b>Değiştirilmiş</b></u> Heading 4)</h4>
+    <h4 style="border: 1px solid red;">ÖRNEKLER (Heading 4): Arama motorları "heading"lere bakarak indeksleme yapıyor...</h4>
+    <h4 style="border: 2px solid DodgerBlue; font-size:15px;">ÖRNEKLER (<u><b>Değiştirilmiş</b></u> Heading 4)</h4>
     <h5>ÖRNEKLER (Heading 5)</h5>
     <h6>ÖRNEKLER (Heading 6: Last)</h6> 
-    <p id="genInfo"><<< Genel biçimlendirme kuralları için main.css dosyasını inceleyiniz >>></p>
+    <p id="genInfo">*** Genel biçimlendirme kuralları için main.css dosyasını inceleyiniz. Yukarıdaki buton ile tema değiştirme işlemi app.js dosyasında yapılıyor.</p>
     <hr>
 
     <p id="msg01"><u>Örnek #01:</u> Liste Ekleme (id ismi "msg01" olduğu için yazı tipi farklı)</p>
     <ul>
-        <li class="list01">main.css'deki genel kurallar gereği bu liste elemanının başında "kare" var (Class ismi: list01)</li>
-        <li>Bu liste elemanının class ismi yok o yüzden genel kural gereği başında "daire" var. (li element kuralı)</li>
+        <li class="list01">main.css'deki genel kurallar gereği bu liste elemanının başında "kare" var (Class ismi: "list01")</li>
+        <li>Bu liste elemanının class ismi yok o yüzden genel kural gereği başında "daire" var. ("li" element kuralı)</li>
     </ul>
     <hr>
 
@@ -51,7 +57,7 @@
     </pre>
     <hr>
 
-    <p><u>Örnek #05:</u> Stiller</p>  
+    <p><u>Örnek #05:</u> "Inline" Stiller</p>  
     <h3 style="background-color:blue;"><b>Bu yazı, başlık 3 olarak yazıldı. Arka planı mavi renk. Temaya göre yazı rengi değişiyor.</b></h3>
     <h3 class="customHeading01"><b>Bu yazı, başlık 3 olarak mavi renk üzerine sarı olarak yazıldı ama CSS dosyasındaki default <br>
         yazı rengi (* {...} kısmı ) yüzünden istediğimiz gibi olmuyor! </b></h3>
@@ -62,9 +68,66 @@
         Renkli kısım temayla değişmiyor. ("span" kullanıldı) Yazı tipi "Segoe UI" ailesi seçildi. Metin ortalandı ama işlev görmedi.</p>
     <hr>
 
-    <p><u>Örnek #06:</u> ...</p>  
+    <p><u>Örnek #06:</u> Biçimlendirilmiş Yazılar</p>  
+    <ul>
+        <li><b>Kalın</b> ve <strong>Güçlü</strong> birbirine benziyor. Bir okuyucu varsa güçlü kısmı ona göre okunur.</li>
+        <li><i>İtalik</i> ve <em>Vurgulanan</em> birbirine benziyor. Bir okuyucu varsa vurgulanan kısmı ona göre okunur.</li>
+        <li>Ön tanımlı olarak sarı renk ile <mark style="background-color: blue; color: white;"> imlenmiş.</mark> Burada ön tanımlı renkleri değiştirdik.</li>
+        <li>Normalden <small>küçük</small> yazılmış</li>
+        <li><del>Silinmiş.</del> Bir düzeltme özellikle vurgulanmak istenirse kullanılır.</li>
+        <li><ins>Eklenmiş.</ins> Bir düzeltme özellikle vurgulanmak istenirse kullanılır. Silinmiş örneği ile beraber kullanılabilir.</li>
+        <li><sub>İndis</sub> olarak yazılmış</li>
+        <li><sup>Üstel</sup> olarak yazılmış</li>
+        <li>Aşağıdaki paragraf başka bir yerden <u>ALINTIDIR.</u> Tırnak ("...") için (q) kullanılır.
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+            For 50 years, WWF has been protecting the future of nature.
+            The world's leading conservation organization,
+            WWF works in 100 countries and is supported by
+            <q>1.2 million members</q> in the United States and
+            close to 5 million globally.
+            </blockquote>
+        </li>
+        <li>Örneğin bir kısaltmanın açılımını üzerine gelince göstermek için: <abbr title="Tango Alfa Two Lima Sierra Mike">TA2LSM</abbr></li>
+        <li>Adres bilgisi vermek için:
+            <address>
+            <pre>
+                Semih ŞENOL
+                Elektronik ve Haberleşme Yüksek Mühendisi
+                Kocaeli Üniversitesi (Lisans)
+                Kocaeli Üniversitesi (Yüksek Lisans)
+                Arga Teknoloji San. ve Tic. Ltd. Şti. (Kurucu Ortak)
+            </pre>
+            </address>
+        </li>
+        <li>Birisi tarafından yapılmış bir işi referans göstermek için (cite) kullanılır. Browser'lar bunu genelde italik olarak gösterir.</li>
+        <br>
+        <img src="resources/img_the_scream.jpg" width="220" height="277" alt="The Scream">
+        <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>   
+        <li>Bir yazıyı tersten yazmak için mesela yandaki yazı HTML kodda "HİMES" olarak yazılsa da burada:
+             <mark style="background-color: blue; color: white;"><bdo dir="rtl">HİMES</bdo></mark> şeklinde gözüküyor.
+        </li>     
+    </ul>
     <hr>
-    <p><u>Örnek #07:</u> ...</p>  
+
+    <p><u>Örnek #07:</u> HTML Renkleri</p>  
+    <ul>
+        <li>VS Code Studio'da mesela "color:" ifadesi otomatik olarak tanınır ve renk için öneri kutusu, renk paleti ile beraber açılır.
+            Ön tanımlı renk istenmezse paletten renk seçilebilir. </li>
+        <li>Öntanımlı bazı renkler: Tomato, Orange, DodgerBlue, MediumSeaGreen, Gray, SlateBlue, Violet, LightGray</li>
+        <li>Üç farklı şekilde renk girilebilir: RGB, HEX ve HSL olarak. Opaklık verilmesi istenirse RGBA veya HSLA tercih edilir. (A: Alpha)
+            <pre>
+            * 16.777.216 (16M) farklı renk seçeneği vardır. ( 256<sup>3</sup> )
+            * HEX olarak giriş yapılacaksa FF(RED)  63(GREEN) 47(BLUE) tonları olarak düşünülmelidir.
+            * RGB'de değerler 0-255, HEX'te ise 00-FF arasında olabilir.
+            * Hue Saturation Lightness, HSL formatını ifade eder. İlk değer 0-359 arasında olabilir. Diğerleri yüzde olarak 0-100 arasındadır.
+            </pre>
+            <p style="color: rgb(255,99,71)">TEST METNİ -- rgb(255,99,71)</p>
+            <p style="color: #FF6347">TEST METNİ -- #FF6347</p>
+            <p style="color: hsl(9,100%,64%)">TEST METNİ -- hsl(9,100%,64%)</p>
+            <p style="color: rgba(255,99,71,0.75)">TEST METNİ -- rgba(255,99,71,0.75)</p>
+            <p style="color: hsla(9,100%,64%,0.75)">TEST METNİ -- hsla(9,100%,64%,0.75)</p>
+        </li>
+    </ul>
     <hr>
     <p><u>Örnek #08:</u> ...</p>  
     <hr>
@@ -78,7 +141,7 @@
     </div>    
 
     <!-- <script>alert('W3 Schools HTML-CSS Kursu Test HTML Dosyası (Semih ŞENOL / 04.02.2022)')</script> -->
-    <script src="app.js"></script> <!-- arka plan kodları alacağımız dosya -->
+    <script src="js/app.js"></script> <!-- arka plan kodları alacağımız dosya -->
     <noscript>You need to enable JavaScript to view the full site.</noscript> 
     <!--Eğer script hatası oluşursa bu mesaj görüntülenecek -->
 </body>

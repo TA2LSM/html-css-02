@@ -36,7 +36,11 @@ ul {
 li {
     list-style: circle;
 }
-
+p {
+    padding: 2px; /* paragraflar arası boşluk */
+    border: 2px solid powderblue; /* her paragrafta border olacak. kalınlığı ve rengi verildi */
+    margin: 3px; /* border etrafındaki boşluk */
+}
  
 /* "." ifadesi ile class ismini işaret ediyoruz. Class ismi "list" olanlar başında "kare" ile yazılacak */
 .list01 {
