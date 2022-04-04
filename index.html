@@ -15,7 +15,7 @@
     </style> -->
 </head>
 <body class="dark-theme">
-    <h1>ÖRNEKLER (Heading 1: First)</h1>
+    <h1 id="pageTop">ÖRNEKLER (Heading 1: First)</h1>
     <h2>ÖRNEKLER (Heading 2)</h2>
     <h3>ÖRNEKLER (Heading 3)</h3>
     <h4 style="border: 1px solid red;">ÖRNEKLER (Heading 4): Arama motorları "heading"lere bakarak indeksleme yapıyor...</h4>
@@ -27,13 +27,64 @@
     <br>
 
     <div>
-        <p id="msg01"><u>Örnek #01:</u> Liste Ekleme (id ismi "msg01" olduğu için yazı tipi farklı)</p>
-        <!-- unordered list: sonradan erişilip sıralaması vs değiştirilemeyen liste. Ordered list'te bu işlemler yapılabiliyor. -->
-        <!-- Bir de nested list var. -->
-        <ul>
-            <li class="list01">main.css'deki genel kurallar gereği bu liste elemanının başında "kare" var (Class ismi: "list01")</li>
-            <li>Bu liste elemanının class ismi yok o yüzden genel kural gereği başında "daire" var. ("li" element kuralı)</li>
+        <p id="msg01"><u>Örnek #01:</u> Liste Ekleme (Bu mesajın id ismi "msg01" olduğu için yazı tipi de farklı oldu)</p>
+        <p>Sırasız Liste:</p>
+        <ul class="ulist01">
+            <li class="listItem01">main.css'deki genel kurallar gereği bu liste elemanının başında "kare" var (Class ismi: "listItem01")</li>
+            <li>Bu liste elemanının class ismi yok o yüzden genel tablo kuralı gereği başında "içi dolu daire" var. ("ulist01" element kuralı)</li>
         </ul>
+        <hr>
+
+        <p>Sıralı Liste:</p>
+        <ol type="I" start="8">
+            <li>Sıralı listede başka bir kural belirtilmemişse satırlar otomatik olarak numaralandırılır.</li>
+            <li>Numaralandırma rakamlardan oluşur.</li>
+            <li>Bu numaralandırma 1,2,3... / a, b, c... / A, B, C... / I, II, III... / i, ii, iii... şeklinde olabilir.</li>
+            <li>Bu listede büyük roma rakamları seçeneği kullanılmıştır.</li>
+            <li>Listenin kaçtan başlayacağı seçilebilir. Burada 8 seçilmiştir.</li>
+        </ol>
+        <hr>
+
+        <p>Liste İçinde Liste: (nested list)</p>
+        <ol>
+            <li>Kahve
+                <ol type="a">
+                    <li>Kolombiya kahvesi</li>
+                    <li>Brezilya kahvesi</li>
+                    <li>Etiyopya kahvesi</li>
+                    <li>Türk kahvesi</li>
+                </ol>
+            </li>
+            <li>Çay
+                <ol type="a">
+                    <li>Siyah çay</li>
+                    <li>Yeşil çay</li>
+                    <li>Bitki çayı</li>
+                </ol>
+            </li>
+            <li>Süt</li>
+            <li>Meyve suyu</li>
+            <li>Oralet</li>
+            <li>Ayran</li>
+            <li>Soda</li>
+        </ol> 
+        <p>Açıklama Listesi:</p>
+        <dl>
+            <dt>Kahve</dt>
+            <dd>- siyah sıcak içecek</dd>
+            <dt>Süt</dt>
+            <dd>- beyaz soğuk içecek</dd>
+        </dl>
+        <hr>
+
+        <p>Navigation Listesi:</p>
+        <ul class="navList01">
+            <li><a href="#pageTop">Ana Sayfa</a></li>
+            <li><a href="#example09">Örnek 09'a Git</a></li>
+            <li><a href="#contact">İletişim</a></li>
+            <li><a href="#about">Bu Sayfa Hakkında</a></li>
+        </ul>
+        <br>
     </div>
 
     <div>
@@ -147,7 +198,8 @@
             <li>Örneğin bir kısaltmanın açılımını üzerine gelince göstermek için: <abbr title="Tango Alfa Two Lima Sierra Mike">TA2LSM</abbr></li>
             <li>Adres bilgisi vermek için:
                 <address>
-                <pre>
+                <pre id="contact">
+                    <u>İLETİŞİM:</u> <br>
                     Semih ŞENOL
                     Elektronik ve Haberleşme Yüksek Mühendisi
                     Kocaeli Üniversitesi (Lisans)
@@ -203,7 +255,7 @@
     </div>
 
     <div>
-        <p><b><u>Örnek #09:</u></b> Arka Plan Resmi Ekleme</p>  
+        <p id="example09"><b><u>Örnek #09:</u></b> Arka Plan Resmi Ekleme</p>  
         İki şekilde yapılabilir: <br>
         * İlki genel kural olarak örneğin paragraflara ya da id'li bir paragrafa "background-image: url('...');" kuralı girmektir. <br>
         ( Tüm sayfaya (body), div kısımlarına... vs istenen her yere bu kural uygulanabilir ) <br> <br>
@@ -376,6 +428,14 @@
     </div>
 
     <div>
+        <p id="about"><strong>HAKKINDA:</strong></p>
+        <p>Bu sayfa W3 Schools'ta HTML-CSS konusunda anlatılanlardan, Semih ŞENOL tarafından <br>
+            derlenerek oluşturulmuştur. Çeşitli HTML özellikleri buradan bakılarak kullanılabilir.
+        </p>
+    </div>
+
+
+    <div>
         <button class="btnThemeSelect">Set Light Theme</button>
     </div>    
 
@@ -387,4 +447,4 @@
 </html>
 
 
-<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html_lists.asp -->
+<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html_blocks.asp -->
