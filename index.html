@@ -154,13 +154,26 @@
         <p><b><u>Örnek #04:</u></b> Paragrafta Alt Satıra Geçmek, Metinler Arasına Çizgi Çekmek <br><br>  
         Buradaki metin baya bir uzun olarak yazıldı. Normalde paragrafta <br> ENTER ile alt satıra da geçsek
         HTML'de bunun bir anlamı yoktur. <br> Alt satıra heçmek için "< br >" kullanılır. Düz çizgi ile metin
-        bloklarını <br> ayırmak içinse "< hr >" kullanılır.  
+        bloklarını <br> ayırmak içinse "< hr >" kullanılır. <br>
         </p> 
     <pre>
     Ayrıca burada yazılan yazıda olduğu gibi ENTER tuşunun
     ( Windows'ta: CRLF (\r\n), MAC'te: CR (\r) ) işlevinin
     olması için "< pre >" kullanılır. (preformatted text)
-    </pre>      
+    </pre>    
+    <hr>
+    <p> 
+    <ul>
+        <li>Bazen inline olarak bir metinle ilgili <span style="border: 1px solid #1acc29; font-weight:bold">işlem yapmak</span> gerekirse "span" kullanılır.</li>
+        <li>"p" ve "div" birer blok elementidir. Açılan her blok için çeşitli özellikler body'den ayrı olarak ayarlanabilir.</li>
+        <li>Her elemente "class" ismi verilebilir. Class isimleri "Case Sensitive"dir. Aynı element tiplerinin farklı class isimleri olabilir.</li>
+    </ul>
+    </p>
+    <br>
+
+    <p>Class ismi "classToBeHide" olan elementleri gizle / göster uygulaması. Aşağıdaki butona basarak deneyebilirsiniz...</p>
+    <button class="btnHideShow" style="color: black; background-color: red; width: 100px; height: 30px;">Gizle</button>
+    <p class="classToBeHide"> ((( Yukarıdaki butona basılınca bu yazı kaybolacaktır )))</p>
     </div>
 
     <div>
@@ -200,7 +213,7 @@
                 <address>
                 <pre id="contact">
                     <u>İLETİŞİM:</u> <br>
-                    Semih ŞENOL
+                    Semih ŞENOL (TA2LSM)
                     Elektronik ve Haberleşme Yüksek Mühendisi
                     Kocaeli Üniversitesi (Lisans)
                     Kocaeli Üniversitesi (Yüksek Lisans)
@@ -436,7 +449,7 @@
 
 
     <div>
-        <button class="btnThemeSelect">Set Light Theme</button>
+        <button class="btnThemeSelect">Aydınlık Tema Kullan</button>
     </div>    
 
     <!-- <script>alert('W3 Schools HTML-CSS Kursu Test HTML Dosyası (Semih ŞENOL / 04.02.2022)')</script> -->
@@ -447,4 +460,4 @@
 </html>
 
 
-<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html_blocks.asp -->
+<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html_id.asp -->

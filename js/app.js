@@ -10,11 +10,11 @@ switcher.addEventListener("click", function () {
   if (className === "dark-theme") {
     document.body.classList.remove("dark-theme");
     document.body.classList.add("light-theme");
-    this.textContent = "Set Dark Theme";
+    this.textContent = "Karanlık Tema Kullan";
   } else {
     document.body.classList.remove("light-theme");
     document.body.classList.add("dark-theme");
-    this.textContent = "Set Light Theme";
+    this.textContent = "Aydınlık Tema Kullan";
   }
 
   className = document.body.className;
@@ -38,3 +38,26 @@ function imgMappingFunc(data) {
       break;
   }
 }
+
+const hideShow = document.querySelector(".btnHideShow");
+
+hideShow.addEventListener("click", function () {
+  var text = this.textContent;
+  var x = document.getElementsByClassName("classToBeHide");
+
+  if (text === "Gizle") {
+    this.textContent = "Göster";
+    this.style.background = "green";
+
+    for (var i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+  } else {
+    this.textContent = "Gizle";
+    this.style.background = "red";
+
+    for (var i = 0; i < x.length; i++) {
+      x[i].style.display = "block";
+    }
+  }
+});
