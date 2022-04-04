@@ -102,6 +102,43 @@ a:hover, a:active {
     font-size: 150%;
 }
 
+.table01 {
+    width:40%;
+    border:2px solid black;
+    /*border-collapse: collapse;*/
+    border-color:aqua;
+    text-align: left;
+    padding: 5px;
+    border-spacing: 10px;
+}
+.table01_th, .table01_td {
+    color: black;
+    border:1px solid black;
+    border-color: red;
+    border-radius: 5px;
+    border-style: dashed;
+    background-color: #1acc29;
+}
+
+.table02 {
+    width:40%;
+    border:2px solid black;
+    border-collapse: collapse;
+    border-color:aqua;
+}
+.table02_tr {
+    border-bottom: 1px solid #ddd;
+}
+/* Bu kural ile aşağıdaki çakışacaktır. Birisini seçmek gerekiyor. */
+.table02_tr:hover {background-color: #ff00ff;}
+/*
+.table02_tr:nth-child(even) {
+    background-color: rgba(150, 212, 212, 0.4);
+}
+*/
+.table02_th:nth-child(even), .table02_td:nth-child(even) {
+    background-color: rgba(150, 212, 212, 0.4);
+}
 
 .btnThemeSelect {
     color: var(--btnFontColor);
@@ -127,3 +164,11 @@ a:hover, a:active {
     font-size: larger;
     text-decoration: underline;
 }
+#parag01 {
+    background-image: url('../resources/trBayrak_sb.jpg'); 
+    background-repeat: no-repeat;
+    /*background-attachment: fixed; */
+    /*background-size: 100% 100%;   */
+    color:yellow;
+}
+

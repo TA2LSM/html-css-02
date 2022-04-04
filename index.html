@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W3 Schools' HTML Course</title>
+    <link rel="icon" type="image/x-icon" href="resources/html5.ico"> <!-- Sayfa başlığının yanında gözükecek ikon -->
     <link rel="stylesheet" href="css/main.css"> <!-- External olarak biçimlendirmeleri alacağımız dosya. (Head kısmına yazılır) -->
     <!-- Burada yukarıdakine alternatif olarak internal olarak da aşağıdaki şekilde basit bir biçimlendirme yapmak mümkün -->
     <!-- <style>
@@ -126,9 +127,9 @@
     <div>
         <p id="EX6"><b><u>Örnek #06:</u></b> Biçimlendirilmiş Yazılar</p>  
         <ul>
-            <li><b>Kalın</b> ve <strong>Güçlü</strong> birbirine benziyor. Bir okuyucu varsa güçlü kısmı ona göre okunur.</li>
-            <li><i>İtalik</i> ve <em>Vurgulanan</em> birbirine benziyor. Bir okuyucu varsa vurgulanan kısmı ona göre okunur.</li>
-            <li>Ön tanımlı olarak sarı renk ile <mark style="background-color: blue; color: white;"> imlenmiş.</mark> Burada ön tanımlı renkleri değiştirdik.</li>
+            <li><b>Kalın</b> ve <strong>Güçlü</strong> birbirine benziyor. Bir okuyucu varsa güçlü kısım ona göre okunur.</li>
+            <li><i>İtalik</i> ve <em>Vurgulanan</em> birbirine benziyor. Bir okuyucu varsa vurgulanan kısım ona göre okunur.</li>
+            <li>Ön tanımlı olarak sarı renk ile <mark style="background-color: blue; color: white;"> imlenmiş</mark> yazı. Burada ön tanımlı renkleri değiştirdik.</li>
             <li>Normalden <small>küçük</small> yazılmış</li>
             <li><del>Silinmiş.</del> Bir düzeltme özellikle vurgulanmak istenirse kullanılır.</li>
             <li><ins>Eklenmiş.</ins> Bir düzeltme özellikle vurgulanmak istenirse kullanılır. Silinmiş örneği ile beraber kullanılabilir.</li>
@@ -202,11 +203,176 @@
     </div>
 
     <div>
-        <p><b><u>Örnek #09:</u></b> ...</p>  
+        <p><b><u>Örnek #09:</u></b> Arka Plan Resmi Ekleme</p>  
+        İki şekilde yapılabilir: <br>
+        * İlki genel kural olarak örneğin paragraflara ya da id'li bir paragrafa "background-image: url('...');" kuralı girmektir. <br>
+        ( Tüm sayfaya (body), div kısımlarına... vs istenen her yere bu kural uygulanabilir ) <br> <br>
+        <p id="parag01">Bu kısım paragrafa id verilerek oluşturulmuş <br>
+             ve kuralı da css dosyasından almaktadır. <br>
+             Arka plan resmi kendini tekrarlamayacak <br>
+             şekilde ayarlanmıştır. Aşağıdaki örnekte <br>
+             resim kendini tekrarlamasın diye paragraf <br>
+             boyutu ayarı yapılmıştır.
+        </p>
+
+        * İkincisi ise < p style="background-image: url('...');"> ... < /p > bu şekilde sadace ilgili alanı tanımlamaktır. <br>
+        <p style="background-image: url('resources/trBayrak_sb.jpg'); color:yellow; width:700px; height:350px;">
+            Türkiye Cumhuriyeti Devleti Anayasası <br> <br>
+            MADDE 1:Türkiye Devleti bir Cumhuriyettir. <br> <br>
+            MADDE 2: Türkiye Cumhuriyeti, toplumun huzuru, <br>
+            millî dayanışma ve adalet anlayışı içinde, <br>
+            insan haklarına saygılı, Atatürk milliyetçiliğine bağlı, <br>
+            başlangıçta belirtilen temel ilkelere dayanan, <br>
+            demokratik, lâik ve sosyal bir hukuk Devletidir. <br> <br>
+            MADDE 3: Türkiye Devleti, ülkesi ve milletiyle bölünmez <br>
+            bir bütündür. Dili Türkçedir. Bayrağı, şekli kanununda <br>
+            belirtilen, beyaz ay yıldızlı al bayraktır. Millî marşı <br>
+            "İstiklal Marşı"ır. <br> <br>
+            MADDE 4: Anayasanın 1 inci maddesindeki Devletin şeklinin <br>
+            Cumhuriyet olduğu hakkındaki hüküm ile, 2 nci maddesindeki <br>
+            Cumhuriyetin nitelikleri ve 3 üncü maddesi hükümleri <br>
+            değiştirilemez ve değiştirilmesi teklif edilemez.
+        </p>
     </div>
 
     <div>
-        <p><b><u>Örnek #10:</u></b> ...</p>  
+        <p><b><u>Örnek #10:</u></b> Resim Elementi'nin Kullanımı</p>  
+        <p>Örneğin internet tarayıcısının minimum genişliğine göre bir resim elementi içerisine yüklenecek resmin <br>
+         değişmesini sağlayabiliriz. İnternet tarayıcı penceresinin genişliğini değiştirerek aşağıdaki resmin <br>
+         nasıl değiştiğini gözlemleyebilirsiniz... <br> <br>
+         Aynı zamanda tarayıcının açamayacağı bir formatta resim varsa bu resmin farklı dosya formatlarını sadece <br>
+         "source srcset="..." kısmına yazarak tarayıcının ilk tanıdığı formatı görüntülemesini sağlayabilirsiniz. <br>
+        </p>  
+        <picture>
+            <source media="(min-width: 800px)" srcset="resources/img_food.jpg">
+            <source media="(min-width: 650px)" srcset="resources/img_car.jpg">
+            <img src="resources/img_girl.jpg" style="width:auto;">
+        </picture>
+    </div>
+
+    <div>
+        <p><b><u>Örnek #11:</u></b> Tablo Oluşturma</p>  
+        <p>Aşağıdaki şekilde bir tablo oluşturulabiliriz. <br>
+            tr (satır içeriği), td (her satırda kolon altına yazılacak bilgi), th (kolon başlığı) <br>
+            "colgroup, col, thead, tbody ve tfoot" gibi özellikleri araştırabilirsiniz... 
+        </p>
+        <table class="table01">
+            <!-- Caption hemen table ifadesinden sonra yazılmalıdır -->
+            <caption style="text-align: left;"><b>TABLO-1: EĞİTİM PLANI</b></caption>
+            <tr>
+                <th class="table01_th" colspan="3" style="text-align: center;">ÖĞRENİLECEK KODLAMA DİLLERİ</th>
+            </tr>
+            <tr>
+                <!-- Genişlik toplam tablo genişliği üzerinden yüzde olarak hesaplanır -->
+                <th class="table01_th" style="width: 20%; height: 30px;">KODLAMA</th>
+                <th class="table01_th">EĞİTMEN</th>
+                <th class="table01_th" style="width: 30%;">HEDEF BAŞLAMA TARİHİ</th>
+            </tr>
+            <tr>
+                <td class="table01_td">HTML-CSS</td>
+                <td class="table01_td">W3 Schools</td>
+                <td class="table01_td">01.02.2022</td>
+            </tr>
+            <tr>
+                <td class="table01_td">NodeJS</td>
+                <td class="table01_td">Mosh Hamedani, Jonas Schmedtmann</td>
+                <td class="table01_td">15.02.2022</td>
+            </tr>
+            <tr>
+                <td class="table01_td">Java Script</td>
+                <td class="table01_td">W3 Schools</td>
+                <td class="table01_td">01.04.2022</td>                
+            </tr>
+            <tr>
+                <td class="table01_td">React Native</td>
+                <td class="table01_td">Mosh Hamedani</td>
+                <td class="table01_td">01.05.2022</td>                
+            </tr>
+        </table>
+        <br>
+
+        <table class="table02">
+            <caption style="text-align: left;"><b>TABLO-2: SATIR ve SÜTUN BİÇİMLENDİRME</b></caption>
+            <tr class="table02_tr">
+                <th class="table02_th">KOLON 1</th>
+                <th class="table02_th">KOLON 2</th>
+                <th class="table02_th">KOLON 3</th>
+                <th class="table02_th">KOLON 4</th>
+            </tr>
+            <tr class="table02_tr" style="text-align: center;">
+                <td class="table02_td">1</td>
+                <td class="table02_td">2</td>
+                <td class="table02_td">3</td>
+                <td class="table02_td">4</td>
+            </tr>
+            <tr class="table02_tr" style="text-align: center;">
+                <td class="table02_td">5</td>
+                <td class="table02_td">6</td>
+                <td class="table02_td">7</td>
+                <td class="table02_td">8</td>
+            </tr>
+            <tr class="table02_tr" style="text-align: center;">
+                <td class="table02_td">9</td>
+                <td class="table02_td">10</td>
+                <td class="table02_td">11</td>
+                <td class="table02_td">12</td>
+            </tr>
+            <tr class="table02_tr" style="text-align: center;">
+                <td class="table02_td">13</td>
+                <td class="table02_td">14</td>
+                <td class="table02_td">15</td>
+                <td class="table02_td">16</td>
+            </tr>
+        </table>
+        <br>
+
+        <table class="table03">
+            <caption style="text-align: left;"><b>TABLO-3: KOLON GRUPLAMA</b></caption>
+            <colgroup>
+                <col span="2" style="background-color: #1acc29">
+                <col span="1"> <!-- kolon gruplama sırayla gittiği için 2 + 1 + 1 şeklinde gidecek -->
+                <col span="1" style="background-color: #cc1a9d"> <!-- visibility: collapse ile ilgili gruplar gizlenebilir -->
+            </colgroup>
+            <tr class="table03_tr">
+                <th class="table03_th">KOLON 1</th>
+                <th class="table03_th">KOLON 2</th>
+                <th class="table03_th">KOLON 3</th>
+                <th class="table03_th">KOLON 4</th>
+            </tr>
+            <tr class="table03_tr" style="text-align: center;">
+                <td class="table03_td">1</td>
+                <td class="table03_td">2</td>
+                <td class="table03_td">3</td>
+                <td class="table03_td">4</td>
+            </tr>
+            <tr class="table03_tr" style="text-align: center;">
+                <td class="table03_td">5</td>
+                <td class="table03_td">6</td>
+                <td class="table03_td">7</td>
+                <td class="table03_td">8</td>
+            </tr>
+            <tr class="table03_tr" style="text-align: center;">
+                <td class="table03_td">9</td>
+                <td class="table03_td">10</td>
+                <td class="table03_td">11</td>
+                <td class="table03_td">12</td>
+            </tr>
+            <tr class="table03_tr" style="text-align: center;">
+                <td class="table03_td">13</td>
+                <td class="table03_td">14</td>
+                <td class="table03_td">15</td>
+                <td class="table03_td">16</td>
+            </tr>
+        </table>
+        <br>
+    </div>
+
+    <div>
+        <p><b><u>Örnek #12:</u></b> ...</p>  
+    </div>
+
+    <div>
+        <p><b><u>Örnek #13:</u></b> ...</p>  
     </div>
 
     <div>
@@ -221,4 +387,4 @@
 </html>
 
 
-<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html_images_background.asp -->
+<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html_lists.asp -->
