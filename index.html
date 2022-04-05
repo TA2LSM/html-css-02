@@ -15,13 +15,14 @@
     </style> -->
 </head>
 <body class="dark-theme">
-    <h1 id="pageTop">ÖRNEKLER (Heading 1: First)</h1>
+    <h3>TARİH: <span id="textDateTime" style="color: red;">((( Görüntülemek için butona tıklayınız... )))</span></h3>
+    <h1 id="pageTop">ÖRNEKLER (Heading 1: En Büyük)</h1>
     <h2>ÖRNEKLER (Heading 2)</h2>
     <h3>ÖRNEKLER (Heading 3)</h3>
     <h4 style="border: 1px solid red;">ÖRNEKLER (Heading 4): Arama motorları "heading"lere bakarak indeksleme yapıyor...</h4>
     <h4 style="border: 2px solid DodgerBlue; font-size:15px;">ÖRNEKLER (<u><b>Değiştirilmiş</b></u> Heading 4)</h4>
     <h5>ÖRNEKLER (Heading 5)</h5>
-    <h6>ÖRNEKLER (Heading 6: Last)</h6> 
+    <h6>ÖRNEKLER (Heading 6: En Küçük)</h6> 
     <p id="genInfo">*** Genel biçimlendirme kuralları için main.css dosyasını inceleyiniz. Yukarıdaki buton ile tema değiştirme işlemi app.js dosyasında yapılıyor.</p>
     <hr>
     <br>
@@ -439,9 +440,9 @@
     </div>
 
     <div>
-        <p><b><u>Örnek #12:</u></b> Inline Frame Kullanımı
+        <p><b><u>Örnek #12:</u></b> Inline Frame Kullanımı (Frame Killer kodu olmayan sitelerde çalışır. Ayrıca bazı tarayıcılar bu özelliği engellebilir)
         <br><br>
-        <p><a href="https://www.google.com.tr" target="iframe01"><b>GOOGLE Sayfasını Aşağıda Aç</b></a></p>
+        <p><a href="https://www.rarlab.com/" target="iframe01"><b>Linki Aşağıda Aç</b></a></p>
         <iframe id="iframe01" name="iframe01" src="resources/message.html" frameborder="1" title="Iframe Örneği"></iframe>
         </p>  
     </div>
@@ -459,6 +460,7 @@
 
 
     <div>
+        <button class="btnDateTime" type="button" onclick="document.getElementById('textDateTime').innerHTML = Date()">Tarih Saati Güncelle</button>
         <button class="btnThemeSelect">Aydınlık Tema Kullan</button>
     </div>    
 
@@ -470,4 +472,4 @@
 </html>
 
 
-<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html_scripts.asp -->
+<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html_head.asp -->

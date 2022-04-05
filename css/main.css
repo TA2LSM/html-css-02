@@ -175,16 +175,26 @@ a:hover, a:active {
     color: var(--btnFontColor);
     background-color: var(--btnBg);    
     position: absolute;
-    top: 28px;
+    top: 70px;
     left: 600px;
     height: 25px;
     width: 130px;
-    border-radius: 10%; /* 50% */
+    border-radius: 5%;
     border: none;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
 }
 .btnThemeSelect:focus { outline-style: none; }
+
+.btnDateTime {
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);    
+    position: absolute;
+    top: 18px;
+    left: 600px;
+    height: 25px;
+    width: 130px;
+    border-radius: 5%;
+    border: none;
+}
 
 
 #iframe01 {
@@ -193,6 +203,7 @@ a:hover, a:active {
     zoom: 0.2;
 
     background-color: white;
+
     /*
     -webkit-transform: scale(1.0);
     transform: scale(1.0);
