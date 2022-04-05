@@ -45,19 +45,28 @@ hideShow.addEventListener("click", function () {
   var text = this.textContent;
   var x = document.getElementsByClassName("classToBeHide");
 
-  if (text === "Gizle") {
-    this.textContent = "Göster";
+  if (text === "Metni Gizle") {
+    this.textContent = "Metni Göster";
     this.style.background = "green";
 
     for (var i = 0; i < x.length; i++) {
       x[i].style.display = "none";
     }
   } else {
-    this.textContent = "Gizle";
+    this.textContent = "Metni Gizle";
     this.style.background = "red";
 
     for (var i = 0; i < x.length; i++) {
-      x[i].style.display = "block";
+      x[i].style.display = "inline";
+      // burada "block" seçeneği seçilirse p ve div gibi blok elementlerine uygun olur
+      // inline seçilirse span gibi inline elementlerine uygun olur
     }
   }
 });
+
+function changeText() {
+  var text = document.getElementById("textToBeChange").innerHTML;
+
+  if (text !== "MERHABA") document.getElementById("textToBeChange").innerHTML = "MERHABA";
+  else document.getElementById("textToBeChange").innerHTML = "NASILSIN?";
+}

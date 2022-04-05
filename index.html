@@ -77,10 +77,11 @@
         </dl>
         <hr>
 
-        <p>Navigation Listesi:</p>
+        <p><b>Yönlendirme (navigation) Listesi Örneği:</b> Bookmark özelliği ile yapılır.</p>
         <ul class="navList01">
             <li><a href="#pageTop">Ana Sayfa</a></li>
             <li><a href="#example09">Örnek 09'a Git</a></li>
+            <li><a href="resources/message.html#endPoint">Masal Sayfasında Son'a Git</a></li>
             <li><a href="#contact">İletişim</a></li>
             <li><a href="#about">Bu Sayfa Hakkında</a></li>
         </ul>
@@ -113,7 +114,7 @@
             </p> 
 
             <p> Yazı alanı ekleme: <br>
-                <textarea style="color:black; resize: none;" name="TA" id="txtAr01" cols="100" rows="4">Bu kısım yazı alanıdır. (textarea) 100 karakter genişlikli ve 4 satır olarak ayarlanmıştır.
+                <textarea style="color:black; resize: none;" name="TA" id="txtAr01" cols="100" rows="4" wrap="soft" readonly>Bu kısım yazı alanıdır. (textarea) 100 karakter genişlikli ve 4 satır olarak ayarlanmıştır. Ölçüleri sabitlenmiştir. (Boyutu elle değiştirilemez) Bu alana sığmayan yazılar alt satıra geçecek şekilde ayarlanmıştır. Ayrıca salt okunur formattadır.
                 </textarea>
             </p>
 
@@ -127,16 +128,16 @@
                 "Relative link" verme:
                 <li><a href="resources/message.html" target="_blank">Relative link olarak verilmiş başka bir sayfaya gitmek için buraya,
                     aşağıdaki resme ya da butonlara tıklayınız...</a></li>
-                <li><a href="resources/message.html" title="Mesaj Sayfasına git..." target="_blank">Yeni sayfada "relative link"e gitmek için tıklayınız. (üstüne gelince açıklama görüntülenir)</a></li>
+                <li><a href="resources/message.html" title="Masal Sayfasına git..." target="_blank">Yeni sayfada "relative link"e gitmek için tıklayınız. (üstüne gelince açıklama görüntülenir)</a></li>
                 <br>
                 <a href="resources/message.html">
-                    <img src="resources/message.png" alt="Mesaj Sayfası" style="background-color: white; width:60px; height:60px;">
+                    <img src="resources/message.png" alt="Masal Sayfası" style="background-color: white; width:60px; height:60px;">
                 </a> 
                 <br>
                 <p style="font-size: small;">Aynı Sayfada / Ayrı Sayfada</p>
-                <button style="color:black" onclick="document.location='resources/message.html'">Mesaj Sayfası</button>
+                <button style="color:black" onclick="document.location='resources/message.html'">Masal Sayfası</button>
                 <!-- BİLGİ: Aşağıdaki kod pop-up olarak algılanıyor -->
-                <button style="color:black" onclick="window.open('resources/message.html','_blank')">Mesaj Sayfası</button> 
+                <button style="color:black" onclick="window.open('resources/message.html','_blank')">Masal Sayfası</button> 
                 <br>
                 <br>
                 <li>E-mail linki vermek:  <a href="mailto:semihsenol@gmail.com">TA2LSM'ye mail at...</a></li>
@@ -166,14 +167,19 @@
     <ul>
         <li>Bazen inline olarak bir metinle ilgili <span style="border: 1px solid #1acc29; font-weight:bold">işlem yapmak</span> gerekirse "span" kullanılır.</li>
         <li>"p" ve "div" birer blok elementidir. Açılan her blok için çeşitli özellikler body'den ayrı olarak ayarlanabilir.</li>
-        <li>Her elemente "class" ismi verilebilir. Class isimleri "Case Sensitive"dir. Aynı element tiplerinin farklı class isimleri olabilir.</li>
+        <li>Her elemente "class" ismi verilebilir. Class isimleri "Case Sensitive"dir. Aynı element tiplerinin farklı class isimleri olabilir. İşlem yapılacağı zaman aynı class isimlerine sahip bütün elementler etkilenir.</li>
+        <li>ID ise elemente özgün (unique) bir isimdir. Birden fazla elemente aynı isim verilemez.Aynı HTML dosyasında sadece bir kere kullanılabilir. Sadece bir elemente özgü biçimlendirme ve değişiklik yapmak için kullanılır.</li>
+        <li>Class ismi "classToBeHide" olan elementleri gizle / göster uygulaması. Aşağıdaki butona basarak deneyebilirsiniz...</li>
+        
+        <br>
+        <button class="btnHideShow" style="color: black; background-color: red; width: 100px; height: 30px; font-weight: bold;">Metni Gizle</button>
+        <span class="classToBeHide">>>> Yandaki butona basılınca bu yazı kaybolacaktır...</span>   
+        <br>
+        <br>
+        <button onclick="changeText()" style="color: black; background-color: violet; width: 100px; height: 30px; font-weight: bold;">Değiştir</button>
+        <span id="textToBeChange">>>> Yandaki butona basılınca bu yazı içeriği değişicektir...</span>  
     </ul>
     </p>
-    <br>
-
-    <p>Class ismi "classToBeHide" olan elementleri gizle / göster uygulaması. Aşağıdaki butona basarak deneyebilirsiniz...</p>
-    <button class="btnHideShow" style="color: black; background-color: red; width: 100px; height: 30px;">Gizle</button>
-    <p class="classToBeHide"> ((( Yukarıdaki butona basılınca bu yazı kaybolacaktır )))</p>
     </div>
 
     <div>
@@ -433,7 +439,11 @@
     </div>
 
     <div>
-        <p><b><u>Örnek #12:</u></b> ...</p>  
+        <p><b><u>Örnek #12:</u></b> Inline Frame Kullanımı
+        <br><br>
+        <p><a href="https://www.google.com.tr" target="iframe01"><b>GOOGLE Sayfasını Aşağıda Aç</b></a></p>
+        <iframe id="iframe01" name="iframe01" src="resources/message.html" frameborder="1" title="Iframe Örneği"></iframe>
+        </p>  
     </div>
 
     <div>
@@ -460,4 +470,4 @@
 </html>
 
 
-<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html_id.asp -->
+<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html_scripts.asp -->
