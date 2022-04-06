@@ -3,16 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Ölçekleme ile değişik ekran tiplerinde bile sayfa güzel gözükür -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W3 Schools' HTML Course</title>
+   
+    <!-- <meta http-equiv="refresh" content="60">  -->
+    <!-- 60sn'de bir sayfayı yenile --> 
+
+    <!-- Arama motorlarının insdekslemesi için bilgiler -->
+    <meta name="keywords" content="HTML, CSS, JavaScript">  
+    <meta name="description" content="Uygulamalı HTML, CSS ve JavaScript Dosyası">
+    <meta name="author" content="Semih SENOL">    
+
+    <title>W3 Schools' HTML Course</title> <!-- Sayfa başlığı (sadece text) -->
     <link rel="icon" type="image/x-icon" href="resources/html5.ico"> <!-- Sayfa başlığının yanında gözükecek ikon -->
+
     <link rel="stylesheet" href="css/main.css"> <!-- External olarak biçimlendirmeleri alacağımız dosya. (Head kısmına yazılır) -->
-    <!-- Burada yukarıdakine alternatif olarak internal olarak da aşağıdaki şekilde basit bir biçimlendirme yapmak mümkün -->
+    <!-- Burada yukarıdakine alternatif olarak internal olarak da aşağıdaki şekilde basit bir biçimlendirme yapmak da mümkün -->
     <!-- <style>
         body {background-color: powderblue;}
         h1   {color: blue;}
         p    {color: red;}
     </style> -->
+
+    <!-- Base ile verilecek her linkin başında ne olacağı belirtilir. Her html dosyasında sadece bir tane "base" 
+    olabilir. Örneğin aşağıdaki kod "head" kısmına yazılırsa;
+
+    <base href="https://www.semihsenol.com/" target="_blank">
+
+    ve html dosyasında herhangi bir yerde "... href = "users/login.html" ..." gibi bir link varsa bu link
+    https://www.semihsenol.com/users/login.html şeklinde kullanılacak ve yeni boş bir sayfada açılacaktır.
+    -->
 </head>
 <body class="dark-theme">
     <h3>TARİH: <span id="textDateTime" style="color: red;">((( Görüntülemek için butona tıklayınız... )))</span></h3>
@@ -23,7 +44,8 @@
     <h4 style="border: 2px solid DodgerBlue; font-size:15px;">ÖRNEKLER (<u><b>Değiştirilmiş</b></u> Heading 4)</h4>
     <h5>ÖRNEKLER (Heading 5)</h5>
     <h6>ÖRNEKLER (Heading 6: En Küçük)</h6> 
-    <p id="genInfo">*** Genel biçimlendirme kuralları için main.css dosyasını inceleyiniz. Yukarıdaki buton ile tema değiştirme işlemi app.js dosyasında yapılıyor.</p>
+    <p id="genInfo">* Genel biçimlendirme kuralları için main.css dosyasını inceleyiniz. <br>
+        * Yukarıdaki buton ile tema değiştirme işlemi app.js dosyasında yapılıyor.</p>
     <hr>
     <br>
 
@@ -308,7 +330,7 @@
     </div>
 
     <div>
-        <p><b><u>Örnek #10:</u></b> Resim Elementi'nin Kullanımı</p>  
+        <p id="EX10"><b><u>Örnek #10:</u></b> Resim Elementi'nin Kullanımı</p>  
         <p>Örneğin internet tarayıcısının minimum genişliğine göre bir resim elementi içerisine yüklenecek resmin <br>
          değişmesini sağlayabiliriz. İnternet tarayıcı penceresinin genişliğini değiştirerek aşağıdaki resmin <br>
          nasıl değiştiğini gözlemleyebilirsiniz... <br> <br>
@@ -356,9 +378,14 @@
                 <td class="table01_td">01.04.2022</td>                
             </tr>
             <tr>
-                <td class="table01_td">React Native</td>
+                <td class="table01_td">React</td>
                 <td class="table01_td">Mosh Hamedani</td>
                 <td class="table01_td">01.05.2022</td>                
+            </tr>
+            <tr>
+                <td class="table01_td">React Native</td>
+                <td class="table01_td">Mosh Hamedani</td>
+                <td class="table01_td">01.07.2022</td>                
             </tr>
         </table>
         <br>
@@ -448,14 +475,103 @@
     </div>
 
     <div>
-        <p><b><u>Örnek #13:</u></b> ...</p>  
+        <p><b><u>Örnek #13:</u></b> Layout (yerleşim) Özelliği</p>  
+        <ul>4 farklı şekilde yapılabilir.
+            <li>CSS framework kullanmak: <a target="_blank" href="https://www.w3schools.com/w3css/default.asp">W3.CSS</a> / <a target="_blank" href="https://www.w3schools.com/bootstrap/default.asp">Bootstrap</a></li>
+            <li>CSS float yerleşimi (html ve css dosyaları ayrı ayrı yazıldı) <a target="_blank" href="resources/layout1.html">Göster</a></li>
+            <li>CSS flexbox özelliği (tek bir html dosyası olarak yazıldı) <a target="_blank" href="resources/layout2.html">Göster</a></li></li>
+            <li>CSS grid özelliği. Detayları öğrenmek için <a target="_blank" href="https://www.w3schools.com/css/css_grid.asp">tıklayınız...</a></li>
+        </ul>
     </div>
 
     <div>
-        <p id="about"><strong>HAKKINDA:</strong></p>
-        <p>Bu sayfa W3 Schools'ta HTML-CSS konusunda anlatılanlardan, Semih ŞENOL tarafından <br>
-            derlenerek oluşturulmuştur. Çeşitli HTML özellikleri buradan bakılarak kullanılabilir.
-        </p>
+        <p><b><u>Örnek #14:</u></b> HTML Responsive Design</p>
+        Her türlü cihazda sitenin güzel gözükmesi için yapılan tasarımdır.
+        <ul>
+            <li>
+                Örneğin aşağıdaki resim normal boyutunun 1/4'ü kadarına ayarlanmıştır. Bu durumda bile tarayıcı penceresi yandan <br>
+                ufaltılırsa resim ona göre ölçeklenecektir. (width="25%") Eğer kodda (width="25%") yerine (style="width:100%;") <br>
+                kullansaydık resim tarayıcı genişliğine ayarlanacak ve sonra ölçeklenecekti. Tarayıcı genişliği resmin genişliğinden <br>
+                büyükse resim genişletilecekti. Bu da resmin kötü görünmesine yol açabilirdi. Ayrıca aşağıdaki iki örnek de aynı <br>
+                şeyi ifade ediyor. (Resim üstünde bekleyerek bakınız) <br><br>
+
+                <img title="width='25%'" src="resources/img_girl.jpg" alt="Bereli Kız" width="25%"> 
+                <img title="style='width: 25%;'" src="resources/img_girl.jpg" alt="Bereli Kız" style="width: 25%;">                 
+            </li>
+            <br>
+
+            <li>
+                Aşağıdaki örnekte ise genişliği kendi genişliğine ayarlanmış bir resmin, tarayıcı bu genişlikten daha küçükse <br>
+                orantılı bir şekilde nasıl ölçeklendiği gözükmektedir. <br><br>
+
+                <img src="resources/img_girl.jpg" alt="Bereli Kız" style="max-width:100%; height:auto;"> 
+            </li>
+            <br>
+            <li>Ayrıca sayfa genişliğine göre aynı alana farklı farklı resimlerin nasıl yerleştirileceğinden <a href="#EX10">(((ÖRNEK 10)))</a>'da bahsetmiştik.</li>
+            <li>
+                Sayfa genişliğine göre boyutu değişen yazı örneği aşağıdaki gibidir.
+                <h1 style="font-size:2vw">Bu yazı, boyutu ölçeklenen yazıdır. Font size olarak vw (viewport width) <br>
+                kullanılırsa sabit bir boyut yerine sayfa ölçeğine göre bir size elde edilir. (1vw = 1%)</h1> 
+            </li>
+            <li>Bootstrap kullanılarak da responsive bir sayfa yapılabilir. Burada ön tanımlı kuralların olduğu css dosyalarından <br>
+                istenilen bir tanesi seçilip kullanılabilr. (Hazır template) HTML dosyası web üzerinde hazır olan css ve js dosyalarını <br>
+                referans alarak çalışır. Görmek için <a target="_blank" href="resources/bootstrapExample.html">tıklayınız...</a>
+            </li>
+        </ul>
+
+        <div style="height: 270px;">
+            <p>Değişen boyuta göre template'i değişen dizaynlara örnek aşağıdaki gibidir (800px ve daha ufak genişliklerde yerleşimde değişiklik olacaktır) <br>
+                Çok daha farklı örnekler oluşturulabilir. Burada biçimlendirmeler html dosyası içine DEĞİL ayrı bir css dosyası içine yazılmıştır. <br>
+                Responsive Web Design Tutorial'ına bakmak için <a target="_blank" href="https://www.w3schools.com/css/css_rwd_intro.asp">tıklayınız...</a> <br>
+                ( Aşağıdaki boşluk özellikle bırakılmıştır )
+            </p>
+            
+            <div class="leftQueryTemplate">
+                <p>Sol Menu</p>
+            </div>          
+            <div class="mainQueryTemplate">
+                <p style="color: black;">Ana İçerik</p>
+            </div>          
+            <div class="rightQueryTemplate">
+                <p>Sağ İçerik</p>
+            </div>       
+        </div>  
+    </div>
+
+    <div>
+        <p><b><u>Örnek #15:</u></b> HTML Dosyası İçerisine Kod ve Formül Yazmak</p>  
+        <ul>
+            <li> Formül girme: (code) <br>
+                <code>
+                    x = 5;
+                    y = 6;
+                    z = x + y;
+                </code>
+            </li><br>
+            <li>Klavye girdisi alma: (kbd) <br>
+                Sayfayı <kbd>Ctrl + S</kbd> ile kaydedebilirsiniz.
+            </li><br>
+            <li>Program çıktısı vermek: (samp) <br>
+                <samp>File not found.<br>Press F1 to continue...</samp>
+            </li><br>
+            <li>Değişken belirtme: (var) <br>
+                Üçgenin alanı: 1/2 x <var>b</var> x <var>h</var>, burada <var>b</var> taban uzunluğu ve <var>h</var> dikey yüksekliktir.
+            </li>
+        </ul>
+
+        <br>
+    </div>
+
+    <div>
+        <p><b><u>Örnek #16:</u></b> ...</p>  
+    </div>
+
+    <div>
+        <footer id="about"><strong>BU SAYFA HAKKINDA:</strong>
+            <br><br>
+        Bu sayfa W3 Schools'ta HTML-CSS konusunda anlatılanlardan, Semih ŞENOL tarafından <br>
+        derlenerek oluşturulmuştur. Çeşitli HTML özellikleri buradan referans alınarak kullanılabilir.
+        </footer>
     </div>
 
 
@@ -472,4 +588,4 @@
 </html>
 
 
-<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html_head.asp -->
+<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html5_semantic_elements.asp -->

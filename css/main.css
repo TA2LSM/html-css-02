@@ -236,3 +236,31 @@ a:hover, a:active {
     color:yellow;
 }
 
+
+.leftQueryTemplate {
+    background-color: #2196F3;
+    padding: 2px;
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+}
+.mainQueryTemplate {
+    background-color: #f1f1f1;
+    padding: 2px;
+    float: left;
+    width: 55%;
+    box-sizing: border-box;
+}
+.rightQueryTemplate {
+    background-color: #04AA6D;
+    padding: 2px;
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+}
+/* @media ile 800 piksele bir breakpoint koyuyoruz */
+@media screen and (max-width: 800px) {
+  .leftQueryTemplate, .mainQueryTemplate, .rightQueryTemplate {
+    width: 98%; /* 800 piksel veya daha ufak alanda yukarıdaki class'lar %100 olarak ayarlanacak */
+  }
+}
