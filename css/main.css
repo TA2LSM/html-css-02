@@ -264,3 +264,49 @@ a:hover, a:active {
     width: 98%; /* 800 piksel veya daha ufak alanda yukarıdaki class'lar %100 olarak ayarlanacak */
   }
 }
+
+.allInternetBrowsers {
+    margin: 0;
+    padding: 5px;
+    background-color: darkgray;
+}
+.allInternetBrowsers > h1, .internetBrowser {
+    margin: 10px;
+    padding: 5px;
+}
+.internetBrowser {
+    background: white;
+}
+.internetBrowser > h2, .internetBrowser > p {
+    color: black;
+    margin: 4px;
+    font-size: 90%;
+}
+/* internetBrowser class'ı içindeki h2 */
+
+
+.bikes ol {
+    list-style-type: none;
+    padding-left: 0;
+    border-bottom: 1px solid var(--fontColor);
+}
+.bike {
+    display: inline-block;
+}
+.bike a::after {  
+    color: var(--fontColor);
+    content: '>';
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+}
+
+#aside01 {
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    font-style: italic;
+    font-weight: bold;
+    background-color: darkgray;
+}

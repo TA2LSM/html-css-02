@@ -27,13 +27,12 @@
     </style> -->
 
     <!-- Base ile verilecek her linkin başında ne olacağı belirtilir. Her html dosyasında sadece bir tane "base" 
-    olabilir. Örneğin aşağıdaki kod "head" kısmına yazılırsa;
+    olabilir. Örneğin aşağıdaki kod "head" kısmına yazılırsa;-->
 
-    <base href="https://www.semihsenol.com/" target="_blank">
+    <!-- <base href="https://www.semihsenol.com/" target="_blank"> -->
 
-    ve html dosyasında herhangi bir yerde "... href = "users/login.html" ..." gibi bir link varsa bu link
-    https://www.semihsenol.com/users/login.html şeklinde kullanılacak ve yeni boş bir sayfada açılacaktır.
-    -->
+    <!-- ve html dosyasında herhangi bir yerde "... href = "users/login.html" ..." gibi bir link varsa bu link
+    https://www.semihsenol.com/users/login.html şeklinde kullanılacak ve yeni boş bir sayfada açılacaktır. -->
 </head>
 <body class="dark-theme">
     <h3>TARİH: <span id="textDateTime" style="color: red;">((( Görüntülemek için butona tıklayınız... )))</span></h3>
@@ -56,7 +55,7 @@
             <li class="listItem01">main.css'deki genel kurallar gereği bu liste elemanının başında "kare" var (Class ismi: "listItem01")</li>
             <li>Bu liste elemanının class ismi yok o yüzden genel tablo kuralı gereği başında "içi dolu daire" var. ("ulist01" element kuralı)</li>
         </ul>
-        <hr>
+        <hr style="width: 95%; align-self: center;">
 
         <p>Sıralı Liste:</p>
         <ol type="I" start="8">
@@ -66,7 +65,7 @@
             <li>Bu listede büyük roma rakamları seçeneği kullanılmıştır.</li>
             <li>Listenin kaçtan başlayacağı seçilebilir. Burada 8 seçilmiştir.</li>
         </ol>
-        <hr>
+        <hr style="width: 95%; align-self: center;">
 
         <p>Liste İçinde Liste: (nested list)</p>
         <ol>
@@ -98,7 +97,7 @@
             <dt>Süt</dt>
             <dd>- beyaz soğuk içecek</dd>
         </dl>
-        <hr>
+        <hr style="width: 95%; align-self: center;">
 
         <p><b>Yönlendirme (navigation) Listesi Örneği:</b> Bookmark özelliği ile yapılır.</p>
         <ul class="navList01">
@@ -165,6 +164,58 @@
                 <br>
                 <li>E-mail linki vermek:  <a href="mailto:semihsenol@gmail.com">TA2LSM'ye mail at...</a></li>
                 <li>Sayfa içinde bir referans noktasına atlamak: Örnek #6'ya atlamak için <a href="#EX6">"tıklayınız..."</a></li>
+                <li>Navigation linki vermek: <br>
+                    <p><u>1. YÖNTEM:</u> (Çalışması için aşağıdaki tanım yapılmalıdır)</p>
+                    <p>
+                    < base href="https://www.semihsenol.com/" target="_blank" >
+                    </p>
+                    <nav>
+                        <a href="/html/">HTML</a> |
+                        <a href="/css/">CSS</a> |
+                        <a href="/js/">JavaScript</a> |
+                        <a href="/jquery/">jQuery</a>                        
+                    </nav>
+                    <br>
+                    <p><u>2. YÖNTEM:</u></p>
+                    <nav class="bikes">
+                        <ol>
+                            <li class="bike"><a href="/bikes/">Bikes</a></li>
+                            <li class="bike"><a href="/bikes/bmx">BMX</a></li>
+                            <li class="bike">Jump Bike 3000</li>
+                        </ol>
+                    </nav>
+                    <h1>Jump Bike 3000</h1>
+                    <p>This BMX bike is a solid step into the pro world. It looks as legit as it rides and is built to polish your skills.</p> 
+                    <br>                   
+                </li>
+                <hr style="width: 95%; align-self: center;">
+                <li>Element (aside) kullanımı: Bir metinle ilintili olan başka metinler için kullanılır. <br>
+                    <aside id="aside01">
+                        <p>
+                        Bu metin, soldaki metin <br>
+                        ile ilgili ve gözden kaçmaması <br>
+                        gereken bir metindir. Biçimlendirme <br>
+                        css dosyasındadır.
+                        </p>
+                    </aside>
+                    <p> Uzun metin dizisi içinde yandaki metin burası ile ilgili olsun. <br>
+                        Bu durumda yandaki metnin bu uzun metin dizisi içinde göze çarpması için <br>
+                        "aside" kullanacağız. 
+                    </p>                    
+                    <p> Uzun metin dizisi içinde yandaki metin burası ile ilgili olsun. <br>
+                        Bu durumda yandaki metnin bu uzun metin dizisi içinde göze çarpması için <br>
+                        "aside" kullanacağız. 
+                    </p>                                      
+                </li>
+                <li>Figure olarak resim ekleme: Sadece resim değil grafik, kod listesi, örnekleme... vs gibi bilgileri içerebilir.
+                    <figure>
+                        <img src="resources/pic_trulli.jpg" alt="Trulli">
+                        <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
+                    </figure>                     
+                </li>
+                <li>Diğer "Semantic" Elementler: details, mark, summary ve time. Sayfanın en altında liste var.
+                    <a href="https://www.w3schools.com/html/html5_semantic_elements.asp"> ( Sayfaya git )</a>
+                </li>          
             </ul>       
         </ul>
     </div>
@@ -185,7 +236,7 @@
     ( Windows'ta: CRLF (\r\n), MAC'te: CR (\r) ) işlevinin
     olması için "< pre >" kullanılır. (preformatted text)
     </pre>    
-    <hr>
+    <hr style="width: 80%; align-self: center;">
     <p> 
     <ul>
         <li>Bazen inline olarak bir metinle ilgili <span style="border: 1px solid #1acc29; font-weight:bold">işlem yapmak</span> gerekirse "span" kullanılır.</li>
@@ -241,11 +292,11 @@
             <li>Adres bilgisi vermek için:
                 <address>
                 <pre id="contact">
-                    <u>İLETİŞİM:</u> <br>
+                    <u>İLETİŞİM BİLGİLERİ:</u><br>
                     Semih ŞENOL (TA2LSM)
                     Elektronik ve Haberleşme Yüksek Mühendisi
-                    Kocaeli Üniversitesi (Lisans)
-                    Kocaeli Üniversitesi (Yüksek Lisans)
+                    Kocaeli Üniversitesi (Lisans / 2006)
+                    Kocaeli Üniversitesi (Yüksek Lisans / 2009)
                     Arga Teknoloji San. ve Tic. Ltd. Şti. (Kurucu Ortak)
                 </pre>
                 </address>
@@ -312,7 +363,7 @@
         * İkincisi ise < p style="background-image: url('...');"> ... < /p > bu şekilde sadace ilgili alanı tanımlamaktır. <br>
         <p style="background-image: url('resources/trBayrak_sb.jpg'); color:yellow; width:700px; height:350px;">
             Türkiye Cumhuriyeti Devleti Anayasası <br> <br>
-            MADDE 1:Türkiye Devleti bir Cumhuriyettir. <br> <br>
+            MADDE 1: Türkiye Devleti bir Cumhuriyettir. <br> <br>
             MADDE 2: Türkiye Cumhuriyeti, toplumun huzuru, <br>
             millî dayanışma ve adalet anlayışı içinde, <br>
             insan haklarına saygılı, Atatürk milliyetçiliğine bağlı, <br>
@@ -563,14 +614,79 @@
     </div>
 
     <div>
-        <p><b><u>Örnek #16:</u></b> ...</p>  
+        <p><b><u>Örnek #16:</u></b> Ayrı Ayrı Bölümler ve Makaleler Oluşturma </p> 
+        <ul>
+            <li><u>BÖLÜM ÖRNEĞİ:</u>
+                <h2>Türkiye Cumhuriyeti Devleti Anayasası</h2>
+                <section>
+                    <h3>MADDE 1</h3>
+                    Türkiye Devleti bir Cumhuriyettir.
+                </section> 
+                <section>
+                    <h3>MADDE 2</h3>
+                    Türkiye Cumhuriyeti, toplumun huzuru, millî dayanışma ve adalet anlayışı içinde, <br>
+                    insan haklarına saygılı, Atatürk milliyetçiliğine bağlı, başlangıçta belirtilen temel <br>
+                    ilkelere dayanan, demokratik, lâik ve sosyal bir hukuk Devletidir.
+                </section> 
+                <section>
+                    <h3>MADDE 3</h3>
+                    Türkiye Devleti, ülkesi ve milletiyle bölünmez bir bütündür. Dili Türkçedir. Bayrağı, şekli kanununda <br>
+                    belirtilen, beyaz ay yıldızlı al bayraktır. Millî marşı "İstiklal Marşı"ır.
+                </section> 
+                <section>
+                    <h3>MADDE 4</h3>
+                    Anayasanın 1 inci maddesindeki Devletin şeklinin Cumhuriyet olduğu hakkındaki hüküm ile, 2 nci maddesindeki <br>
+                    Cumhuriyetin nitelikleri ve 3 üncü maddesi hükümleri değiştirilemez ve değiştirilmesi teklif edilemez. 
+                </section>  
+            </li>
+            <br><br>
+            <li><u>MAKALE ÖRNEĞİ:</u><br><br>
+                <article class="allInternetBrowsers" style="width:80%; height:auto;">
+                    <h1 style="color: blue;">Most Popular Internet Browsers</h1>
+                    <article class="internetBrowser">
+                    <h2>Google Chrome</h2>
+                    <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+                    </article>
+                    
+                    <article class="internetBrowser">
+                    <h2>Mozilla Firefox</h2>
+                    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+                    </article>
+                    
+                    <article class="internetBrowser">
+                    <h2>Microsoft Edge</h2>
+                    <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+                    </article>
+                </article> 
+            </li>
+        </ul>
+      
+    </div>
+
+    <div>
+        <p><b><u>Örnek #17:</u></b> </p>  
+    </div>
+
+    <div>
+        <p><b><u>Örnek #18:</u></b> </p>  
+    </div>
+
+    <div>
+        <p><b><u>Örnek #19:</u></b> </p>  
+    </div>
+
+    <div>
+        <p><b><u>Örnek #20:</u></b> </p>  
     </div>
 
     <div>
         <footer id="about"><strong>BU SAYFA HAKKINDA:</strong>
-            <br><br>
+        <br><br>
         Bu sayfa W3 Schools'ta HTML-CSS konusunda anlatılanlardan, Semih ŞENOL tarafından <br>
         derlenerek oluşturulmuştur. Çeşitli HTML özellikleri buradan referans alınarak kullanılabilir.
+        <br><br>
+        Bu kısım "footer" elementidir. Sahiplik, lisans/patent, iletişim bilgileri, site haritası, ilgili <br>
+        dökümanlara linkler ve sayfa başındaki kısımlara erişim bilgileri içerir.
         </footer>
     </div>
 
@@ -588,4 +704,4 @@
 </html>
 
 
-<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html5_semantic_elements.asp -->
+<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html5_syntax.asp -->
