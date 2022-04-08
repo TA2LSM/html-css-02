@@ -1,5 +1,5 @@
 <!DOCTYPE html> <!-- Bu kısım HTML5'i ifade ediyor -->
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,6 +55,41 @@
             <li class="listItem01">main.css'deki genel kurallar gereği bu liste elemanının başında "kare" var (Class ismi: "listItem01")</li>
             <li>Bu liste elemanının class ismi yok o yüzden genel tablo kuralı gereği başında "içi dolu daire" var. ("ulist01" element kuralı)</li>
         </ul>
+        <ol><u>HTML DOSYASI DİZAYN KURALLARI:</u>
+            <li>Dosya tipi her zaman belirtilmelidir: < !DOCTYPE html ></li>
+            <li>Element isimleri her zaman küçük harfle yazılmalı ve mutlaka kapatılmalıdır: < p >...< /p ></li>
+            <li>Aynı şekilde özellik tanımlamaları da küçük harf olmalıdır: < a href="...">< /a ></li>
+            <li>Özellik tanımlamalarında referans olarak verilen bağlantılar küçük harfle yazılmalıdır: < table class="striped" ></li>
+            <li>Resimler için HER ZAMAN genişlik ve yükseklik bilgisi verilmelidir</li>
+            <li>Özellik tanımlamalarında eşittir (=) ifadelerinden sonra boşluk bırakılmamalıdır </li>
+            <li>Girintili kod yapısı ve kodun okunabilirliği için büyük kod blokları arasına boşluklar bırakılarak yazılmalıdır. (Bu dosya gibi)</li>
+            <li>HER ZAMAN (title) elementi yazılmalıdır. Sayfa başlığı arama motorlarının baktığı yerlerden birisidir</li>
+            <li>Body elementinin kullanılmaması yeni tarayıcılarda sorun olmazken eskileri için sıkıntı çıkartabilir. Kurallar gereği body ve html <br>
+                kısımlarını yazmak iyi olacaktır. Head elementi de yazılmayabilir ama yazmakta fayda vardır</li>
+            <li>Her zaman dil (lang) elementini eklemekte fayda vardır. Arama motorlarının sayfanın dili hakkında bilgi sahibi olmasını sağlar </li>
+            <li>Yine metadata kısmını kullanmak arama motoru indekslemeleri için gereklidir</li>
+            <li>Ölçeklendirme için "viewport" özelliği mutlaka kullanılmalıdır. Tablet ve telefon gibi genişliği ufak olan ekranlarda <br>
+                tarayıcıya ölçeklendirme bilgisi ancak bu şekilde verilebilir. Bir resmi genişliği %100 olacak şekilde ayarla <br>
+                dediğimizde bu genişlik ne olacak, hangi cihazdayız ve ekran ölçüleri nedir ancak bu şekilde ayarlanabilir.</li>
+            <li>Açıklama eklemek için &lt;!-- ... --&gt; kullanılır. Uzun açıklamalarda &lt;!-- ile --&gt; arasında satır satır açıklama olabilir.</li>
+            <li>Genel tasarım, biçimlendirme ve kod kısımlarının yarı ayrı yazılması (html, css ve js dosyası olarak) her zaman daha avantajlıdır</li>
+            <li>Elementlerin unique id isimleri küçük-büyük harf duyarlı (case sensitive) olduğundan JavaScript kodunda buna göre yazılmalıdır</li>
+            <li>Bazı sunucular (server) yine case sensitive olduğundan GENEL OLARAK relative link şeklinde verilecek dosya isimlerini küçük harf olarak kullanmak yerinde olur.</li>
+            <li>Dosya uzantıları "css", "js" ve "htm/html" şeklindedir. HTM ve HTML arasında hiçbir fark yoktur</li>
+            <li>Server'ın ayarlarına göre ana sayfa için bazen ön tanımlı bir html dosyası ismi kullanmak gerekebilir (index.html ya da default.html gibi</li>
+            <li>HTML formatında bazı karakterleri kullamayız. Bunun yerine onun karşılığı olan ifadeler kullanılmalıdır. Örneğin; <br>
+                < yerine (& lt ya da &# 60) boşluk olmadan yazılır. Birden fazla boşluk (&nbsp;&nbsp;&nbsp;&nbsp;) &lt;&lt; kullanmak için (& nbsp;) boşluk olmadan yazılır.<br>
+                Ayrıca yandaki karakterler de bunlara birer örnektir: (&lt;, &gt;, &amp;, &quot;, &apos;, &cent;, &pound;, &yen;, &euro;, &copy;, &reg;) 
+                Geri kalan sembollerin nasıl yazıldığını siz araştırınız... <a target="_blank" href="https://www.w3schools.com/html/html_symbols.asp">Link 1</a> / <a target="_blank" href="https://www.w3schools.com/html/html_entities.asp">Link 2</a>
+            </li>
+            <li>HTML dosyalarına EMOJİ (&#128516, &#128525, &#128151) eklenebilir. <a target="_blank" href="https://www.w3schools.com/html/html_emojis.asp">Detaylar için...</a></li>
+            <li>HTML dosyası karakter seti de yazılan ifadelerin nasıl çözüleceğini tarayıcıya söylediği için bunu yanlış tanımlamak bazı karakterlerin yanlış <br>
+                görüntülenmesine neden olacaktır <a target="_blank" href="https://www.w3schools.com/html/html_charset.asp">Detaylar için...</a></li>
+            <li>Internet üzerinden bazı karakterler gönderilemeyeceği için bunlar yollanırken değişik şekillere çevrilerek yollanır. Örneğin + yerine %20 şeklinde. <br>
+                Farklı karakter kodlamaları farklı sonuçlar doğuracağı için detaylara burada girilmemiştir. <a target="_blank" href="https://www.w3schools.com/html/html_urlencode.asp">Görüntülemek için...</a></li>
+            <li>Son olarak HTML/HTM'den (HyperText Markup Language) farklı olarak bir de XHTML (EXtensible HyperText Markup Language) dosyaları vardır. XML formatıyla <br>
+                alakalı olan bu dosyaların detayları için <a target="_blank" href="https://www.w3schools.com/xml/default.asp"> tıklayınız...</a></li>
+        </ol>
         <hr style="width: 95%; align-self: center;">
 
         <p>Sıralı Liste:</p>
