@@ -699,19 +699,212 @@
     </div>
 
     <div>
-        <p><b><u>Örnek #17:</u></b> </p>  
+        <p><b><u>Örnek #17:</u></b> FORM Elementinin Kullanımı <a href="https://www.w3schools.com/html/html_forms_attributes.asp">Detaylar için...</a></p>  
+        <ul>
+            <li>Input Örneği: <a target="_blank" href="https://www.w3schools.com/html/html_form_input_types.asp">Input türlerinin detayları için...</a> <br><br>
+                <fieldset style="width: 200px; height: auto;">
+                    <legend>Kullanıcı Bilgileri</legend>                
+                    <form action="resources/action_page.php" target="_blank" method="post">
+                        <label for="fname">ADI:</label><br>
+                        <input type="text" id="fname" name="fname" style="color: black;" value="Semih"><br><br>
+                        <label for="lname">SOYADI:</label><br>
+                        <input type="text" id="lname" name="lname" style="color: black;" value="SENOL"><br><br>
+                        <label for="phone">Telefon Numarası:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="5XX-123-4567" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" style="color: black;" required><br>
+                        <small>Format: 5XX-123-4567</small><br><br>                        
+                        <input type="hidden" id="custId" name="custId" value="3487">
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" id="email" name="email" style="color: black;" value="semihsenol@gmail.com"> <br><br>  
+                        <label for="homepage">Web Sayfası:</label>
+                        <input type="url" id="homepage" name="homepage" style="color: black;" value="www.semihsenol.com"> <br><br>                                       
+                        <label for="pwd">Şifre:</label><br>
+                        <input type="password" id="pwd" name="pwd" style="color: black;" value="123456"><br><br>
+                        <input type="submit" style="color: black;" value="Gönder">
+                        <input type="reset" style="color: black;"> 
+                    </form>
+                    <p>Yukarıda bir de gizli (hidden) alan var. Koda bakınız...</p>
+                </fieldset>
+            </li>
+            <br>
+            
+            <li>Radio Butonu Örneği <br><br>
+                <form>
+                    <input type="radio" id="html" name="fav_language" value="HTML">
+                    <label for="html">HTML</label><br>
+                    <input type="radio" id="css" name="fav_language" value="CSS">
+                    <label for="css">CSS</label><br>
+                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                    <label for="javascript">JavaScript</label>
+                </form>
+            </li>
+            <br>
+
+            <li>Sayı Alanı Örneği <br><br>
+                <form>
+                    <label for="quantity">Oran Seçiniz:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="5" value="1.0" step="0.1" style="color: black;">
+                    <input type="submit" value="Gönder" style="color: black;">
+                </form>
+            </li>
+            <br>           
+            
+            <li>Checkbox Örneği <br><br>
+                <form>
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1"> Bisikletim var</label><br>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label for="vehicle2"> Arabam var</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label for="vehicle3"> Teknem var</label><br><br>
+                    <input type="submit" value="Kaydet" style="color: black;">
+                </form>
+            </li>
+            <br>
+
+            <li>Açılır Menü Örneği (select-option ve selected) <br><br>
+                <form action="resources/action_page.php" target="_blank">
+                    <label for="cars">Arabalar: (Tek seçim)</label>
+                    <select id="cars" name="cars" style="color: black;" >
+                      <option style="color: black;" value="volvo">Volvo</option>
+                      <option style="color: black;" value="saab">Saab</option>
+                      <option style="color: black;" value="fiat">Fiat</option>
+                      <option style="color: black;" value="audi">Audi</option>
+                      <option style="color: black;" value="honda" selected>Honda</option>
+                    </select>
+                    <input type="submit" style="color: black;" >
+                </form>
+                <br>
+                <form action="resources/action_page.php" target="_blank">
+                    <label for="cars">Arabalar: (Tek seçim)</label>
+                    <select id="cars" name="cars" style="color: black;" size="3" >
+                      <option style="color: black;" value="volvo">Volvo</option>
+                      <option style="color: black;" value="saab">Saab</option>
+                      <option style="color: black;" value="fiat">Fiat</option>
+                      <option style="color: black;" value="audi">Audi</option>
+                      <option style="color: black;" value="honda" selected>Honda</option>
+                    </select>
+                    <input type="submit" style="color: black;" >
+                </form>
+                <br>
+                <form action="resources/action_page.php" target="_blank">
+                    <label for="cars">Arabalar: (Çoklu seçim, ctrl basılı tutarak)</label>
+                    <select id="cars" name="cars" style="color: black;" size="3" multiple >
+                      <option style="color: black;" value="volvo">Volvo</option>
+                      <option style="color: black;" value="saab">Saab</option>
+                      <option style="color: black;" value="fiat">Fiat</option>
+                      <option style="color: black;" value="audi">Audi</option>
+                      <option style="color: black;" value="honda" selected>Honda</option>
+                    </select>
+                    <input type="submit" style="color: black;" >
+                </form>
+            </li>
+            <br>
+
+            <li>Text Area Örneği
+                <form action="resources/action_page.php" target="_blank">
+                    <textarea name="message" style="color: black; width:500px; height:100px; resize: none; white-space:pre-line" readonly>
+                        * Burası text area'dır. 
+                        * Bu alan içindeki veri gönderilecektir.
+                        * Aşağıdaki butona değer atanmamıştır. Bu nedenle tarayıcı ön tanımlı ismi görüntülenir.
+                    </textarea>
+                    <br>
+                    <input type="submit" style="color: black;">
+                  </form>
+            </li>
+            <br>
+
+            <li>Buton Örneği <br><br>
+                <button type="button" style="color: black;" onclick="alert('TEBRİKLER!')">Buraya Tıklayın</button>  
+            </li>
+            <br>
+
+            <li>Ön Tanımlı Değerlerin Girdirilmesi: Internet Explorer, Firefox, Chrome, Opera veya Safari yazmaya çalışınız...<br><br>
+                <form action="resources/action_page.php" target="_blank">
+                    <input list="browsers" name="browser" style="color: black;">
+                    <datalist id="browsers">
+                      <option value="Internet Explorer">
+                      <option value="Firefox">
+                      <option value="Chrome">
+                      <option value="Opera">
+                      <option value="Safari">
+                    </datalist>
+                    <input type="submit" style="color: black;">
+                  </form>
+            </li>
+            <br>
+
+            <li>Bir Hesaplama Sonucunun Verdirilmesi (output) <br><br>
+                <form action="resources/action_page.php" target="_blank" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                0
+                <input type="range"  id="a" name="a" value="50">
+                100 +
+                <input type="number" id="b" name="b" style="color: black;" value="50">
+                =
+                <output name="x" for="a b"></output>
+                <br><br>
+                <input type="submit" style="color: black;">
+              </form> 
+            </li>
+            <br>
+
+            <li>Renk Paleti Örneği <br><br>
+                <form action="resources/action_page.php" target="_blank">
+                    <label for="favcolor">En sevdiğiniz rengi seçin:</label>
+                    <input type="color" id="favcolor" name="favcolor" value="#ff0000" style="width: 30px; height: 10px;">
+                    <input type="submit" value="Gönder" style="color: black;">
+                  </form>
+            </li>
+            <br>
+
+            <li>Tarih Seçtirme Örneği <br><br>
+                <form action="resources/action_page.php" target="_blank">
+                    <label for="birthday2">Doğum Günü (gün ve saat):</label>
+                    <input type="datetime-local" id="birthday2" name="birthday2" style="color: black;"><br><br>
+                    <label for="birthday">Doğum Günü:</label>
+                    <input type="date" id="birthday" name="birthday" style="color: black;"><br><br>
+                    <label for="appt">Doğum Saati:</label>
+                    <input type="time" id="appt" name="appt" style="color: black;">                    
+                    <input type="submit" value="Gönder" style="color: black;">
+                </form><br><br>
+                <form>
+                    <label for="datemax">01-01-1980 tarihinden öncesine ait bir tarih girin:</label>
+                    <input type="date" id="datemax" name="datemax" max="1979-12-31" style="color: black;"><br><br>
+                    <label for="datemin">01-01-2000 tarihinden sonrasına ait bir tarih girin:</label>
+                    <input type="date" id="datemin" name="datemin" min="2000-01-02" style="color: black;">
+                </form><br>   
+                Ay ve hafta seçtirme özellikleri bazı tarayıcılarda desteklenmediği için burada yer verilmedi.            
+            </li>
+            <br>
+
+            <li>Dosya Seçtirme Örneği <br><br>
+                <form action="resources/action_page.php" target="_blank">
+                    <label for="myfile">Dosyayı seçiniz:</label>
+                    <input type="file" id="myfile" name="myfile"><br>
+                    <input type="submit" value="Yükle" style="color: black;">
+                </form>                
+            </li>
+            <br>
+
+            <li>Arama Çubuğu Örneği <br><br>
+                <form action="resources/action_page.php" target="_blank">
+                    <label for="gsearch">Google'da Ara:</label>
+                    <input type="search" id="gsearch" name="gsearch" style="color: black;">
+                    <input type="submit" value="ARA" style="color: black;">   
+                </form>
+            </li>
+        </ul>
     </div>
 
     <div>
-        <p><b><u>Örnek #18:</u></b> </p>  
+        <p><b><u>Örnek #18:</u></b> ... </p>  
     </div>
 
     <div>
-        <p><b><u>Örnek #19:</u></b> </p>  
+        <p><b><u>Örnek #19:</u></b> ... </p>  
     </div>
 
     <div>
-        <p><b><u>Örnek #20:</u></b> </p>  
+        <p><b><u>Örnek #20:</u></b> ... </p>  
     </div>
 
     <div>
@@ -739,4 +932,4 @@
 </html>
 
 
-<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html5_syntax.asp -->
+<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html_form_attributes.asp -->
