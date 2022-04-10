@@ -81,7 +81,7 @@ li {
 /* PARAGRAF BİÇİMLENDİRMELERİ */
 div {
     padding: 2px; /* paragraflar arası boşluk */
-    border: 1px solid powderblue; /* her paragrafta border olacak. kalınlığı ve rengi verildi */
+    border: 2px solid powderblue; /* her paragrafta border olacak. kalınlığı ve rengi verildi */
     margin: 3px; /* border etrafındaki boşluk */
 }
 
@@ -309,4 +309,18 @@ a:hover, a:active {
     font-style: italic;
     font-weight: bold;
     background-color: darkgray;
+}
+
+
+.mediaTypes::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+#mediaTypeExplanation {
+    position: relative;
+    left: 50px;
+}
+#mediaTypesImg {
+    left: 30px;
 }

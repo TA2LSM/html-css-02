@@ -1,5 +1,6 @@
 "use strict"; // hata oluşsa da görüntülenmez, akış bozulmaz
 
+//----------------------------------------------------------------------------------------
 // "btn" class'ına ait "switcher" isimli bir queryselector tanımlandı
 const switcher = document.querySelector(".btnThemeSelect");
 
@@ -21,6 +22,7 @@ switcher.addEventListener("click", function () {
   console.log("Current class name: " + className);
 });
 
+//----------------------------------------------------------------------------------------
 // Örnek 8'deki resme tıklandığında çalışacak kısım burası
 function imgMappingFunc(data) {
   switch (data) {
@@ -39,6 +41,7 @@ function imgMappingFunc(data) {
   }
 }
 
+//----------------------------------------------------------------------------------------
 const hideShow = document.querySelector(".btnHideShow");
 
 hideShow.addEventListener("click", function () {
@@ -69,4 +72,24 @@ function changeText() {
 
   if (text !== "MERHABA") document.getElementById("textToBeChange").innerHTML = "MERHABA";
   else document.getElementById("textToBeChange").innerHTML = "NASILSIN?";
+}
+
+//----------------------------------------------------------------------------------------
+var myVideo = document.getElementById("video1");
+
+function playPause() {
+  if (myVideo.paused) myVideo.play();
+  else myVideo.pause();
+}
+
+function makeBig() {
+  myVideo.width = 560;
+}
+
+function makeSmall() {
+  myVideo.width = 320;
+}
+
+function makeNormal() {
+  myVideo.width = 420;
 }

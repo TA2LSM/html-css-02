@@ -703,27 +703,72 @@
         <ul>
             <li>Input Örneği: <a target="_blank" href="https://www.w3schools.com/html/html_form_input_types.asp">Input türlerinin detayları için...</a> <br><br>
                 <fieldset style="width: 200px; height: auto;">
-                    <legend>Kullanıcı Bilgileri</legend>                
-                    <form action="resources/action_page.php" target="_blank" method="post">
-                        <label for="fname">ADI:</label><br>
-                        <input type="text" id="fname" name="fname" style="color: black;" value="Semih"><br><br>
-                        <label for="lname">SOYADI:</label><br>
-                        <input type="text" id="lname" name="lname" style="color: black;" value="SENOL"><br><br>
-                        <label for="phone">Telefon Numarası:</label>
-                        <input type="tel" id="phone" name="phone" placeholder="5XX-123-4567" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" style="color: black;" required><br>
-                        <small>Format: 5XX-123-4567</small><br><br>                        
-                        <input type="hidden" id="custId" name="custId" value="3487">
-                        <label for="email">E-mail:</label><br>
-                        <input type="email" id="email" name="email" style="color: black;" value="semihsenol@gmail.com"> <br><br>  
-                        <label for="homepage">Web Sayfası:</label>
-                        <input type="url" id="homepage" name="homepage" style="color: black;" value="www.semihsenol.com"> <br><br>                                       
-                        <label for="pwd">Şifre:</label><br>
-                        <input type="password" id="pwd" name="pwd" style="color: black;" value="123456"><br><br>
-                        <input type="submit" style="color: black;" value="Gönder">
-                        <input type="reset" style="color: black;"> 
-                    </form>
-                    <p>Yukarıda bir de gizli (hidden) alan var. Koda bakınız...</p>
+                    <legend>Kullanıcı Bilgileri: 1</legend>   
+                    <small>Eğer aşağıdaki alanlardan birisine "autofocus" eklenirse sayfa yüklendiğinde direkt o noktaya <br>
+                        atlanıp aktif edilir. Burada sayfa büyük olduğu için bu özellik kullanılmadı.</small> <br><br>
+                        <form action="resources/action_page.php" target="_blank" method="post">
+                            <label for="fname">ADI:</label><br>
+                            <input type="text" id="fname" name="fname" style="color: black;" maxlength="13" value="Semih (max13)" title="En fazla 13 karakter girebilirsiniz..."><br><br>
+                            <label for="lname">SOYADI:</label><br>
+                            <input type="text" id="lname" name="lname" style="color: black;" value="SENOL"><br><br>
+                            <label for="phone">Telefon Numarası:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="5XX-123-4567" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" style="color: black;" required><br>
+                            <small>Format: 5XX-123-4567</small><br><br>                        
+                            <input type="hidden" id="custId" name="custId" value="3487">
+                            <label for="email">E-mail:</label><br>
+                            <input type="email" id="email" name="email" style="color: black;" value="semihsenol@gmail.com"> <br><br>  
+                            <label for="homepage">Web Sayfası:</label>
+                            <input type="url" id="homepage" name="homepage" style="color: black;" value="www.semihsenol.com"> <br><br>                                       
+                            <label for="pwd">Şifre:</label><br>
+                            <input type="password" id="pwd" name="pwd" style="color: black;" value="123456" minlength="6" title="En az 6 karakter olmalıdır..."><br><br>
+                            <input type="submit" style="color: black;" value="Gönder">
+                            <input type="reset" style="color: black;"> 
+                        </form><br>
+                    <small>Yukarıda bir de gizli (hidden) alan var. Koda bakınız...</small>
                 </fieldset>
+                <br>
+
+                <fieldset style="width: 200px; height: auto;">
+                    <legend>Kullanıcı Bilgileri: 2</legend>                
+                        <form action="resources/action_page.php" target="_blank" method="post">
+                            <label for="fname">ADI:</label><br>
+                            <input type="text" id="fname2" name="fname2" style="color: black;" value="Semih"><br><br>
+                            <label for="lname">SOYADI:</label><br>
+                            <input type="text" id="lname2" name="lname2" style="color: black;" value="SENOL"><br><br> 
+                            <input type="image" src="resources/img_submit.gif" alt="Submit" width="48" height="48"> <br><br>
+                            <input type="submit" formenctype="multipart/form-data" style="color: black;" value="Multipart/form-data olarak gönder"><br><br>
+                            <input type="submit" formtarget="_blank" formaction="resources/action_page.php" style="color: black;" value="Admin olarak giriş yap" title="Başka bir sayfaya yönlendirme yapılabilir...">
+                        </form>     
+                </fieldset>  
+                <br>
+
+                <fieldset style="width: 200px; height: auto;">
+                    <legend>Kullanıcı Bilgileri: 3</legend>                
+                        <form action="resources/action_page.php" target="_blank" method="post">
+                            <label for="fname">ADI:</label><br>
+                            <input type="text" id="fname3" name="fname3" style="color: black;" value="Semih"><br><br>
+                            <label for="lname">SOYADI:</label><br>
+                            <input type="text" id="lname3" name="lname3" style="color: black;" value="SENOL"><br><br> 
+                            <input type="submit" style="color: black;" value="HTTP/GET olarak gönder"><br><br>
+                            <input type="submit" style="color: black;" formmethod="post" value="HTTP/POST olarak gönder">
+                        </form>     
+                </fieldset>  
+                <br>
+
+                <fieldset style="width: 200px; height: auto;">
+                    <legend>Kullanıcı Bilgileri: 4</legend>    
+                    <small>Eğer form'a "novalidate" eklenirse form'daki hiçbir veri doğrulanmadan yollanır.</small><br><br>           
+                        <form action="resources/action_page.php" target="_blank" method="post">
+                            <label for="fname">ADI:</label><br>
+                            <input type="text" id="fname4" name="fname4" style="color: black;" pattern="[A-Za-z0-9]+" minlength="2" value="Semih"><br><br>
+                            <label for="lname">SOYADI:</label><br>
+                            <input type="text" id="lname4" name="lname4" style="color: black;" pattern="[A-Za-z0-9]+" minlength="2" value="SENOL"><br><br> 
+                            <label for="email">E-mail:</label><br>
+                            <input type="email" id="email4" name="email4" style="color: black;" value="semihsenol@gmail.com"> <br><br>                              
+                            <input type="submit" style="color: black;" value="Yollarken Doğrula"><br><br>
+                            <input type="submit" style="color: black;" formnovalidate="formnovalidate" value="Yollarken Doğrulama">
+                        </form>     
+                </fieldset>  
             </li>
             <br>
             
@@ -802,9 +847,10 @@
 
             <li>Text Area Örneği
                 <form action="resources/action_page.php" target="_blank">
-                    <textarea name="message" style="color: black; width:500px; height:100px; resize: none; white-space:pre-line" readonly>
+                    <textarea name="message" style="color: black; width:500px; height:100px; resize: none; white-space:pre-line" readonly disabled>
                         * Burası text area'dır. 
                         * Bu alan içindeki veri gönderilecektir.
+                        * Salt okunur ve disable durumdadır.
                         * Aşağıdaki butona değer atanmamıştır. Bu nedenle tarayıcı ön tanımlı ismi görüntülenir.
                     </textarea>
                     <br>
@@ -896,15 +942,223 @@
     </div>
 
     <div>
-        <p><b><u>Örnek #18:</u></b> ... </p>  
+        <p><b><u>Örnek #18:</u></b> HTML Grafikleri (CANVAS) <br><br>
+            CANVAS, çizimleri JavaScript kullanarak yapan bir yöntemdir. Tüm çizimler pixel pixel yapılır. <br>
+            Hatalı bir yere çizdirme ya da çizim özelliklerini değiştirme gerekirse tarayıcı hepsini baştan <br>
+            oluşturmak zorundadır. (render)     
+        </p> 
+        <ul>
+            <li>Çizim alanı belirleme ve çizgi çizme: <br><br>
+                <canvas id="myCanvas" width="200" height="100" style="border:1px solid #00ff1e;"></canvas> 
+                <script>
+                    var c = document.getElementById("myCanvas");
+                    var ctx = c.getContext("2d");
+                    ctx.strokeStyle = 'red';
+                    ctx.moveTo(0, 0);
+                    ctx.lineTo(200, 100);
+                    ctx.stroke();
+                </script> 
+            </li>
+            <br>
+
+            <li>Çizim alanı belirleme ve daire çizme:<br><br>
+                <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #00ff1e;"></canvas> 
+                <script>
+                    var c = document.getElementById("myCanvas2");
+                    var ctx = c.getContext("2d");
+                    ctx.strokeStyle = 'red';
+                    ctx.beginPath();
+                    ctx.arc(100, 50, 40, 0, 2 * Math.PI);
+                    ctx.stroke();
+                </script>                 
+            </li>
+            <br>
+
+            <li>Çizim alanı belirleme ve yazı yazma/yazı çizdirme:<br><br>
+                <canvas id="myCanvas3" width="200" height="120" style="border:1px solid #00ff1e;"></canvas> 
+                <script>
+                    var c = document.getElementById("myCanvas3");
+                    var ctx = c.getContext("2d");
+                    ctx.strokeStyle = 'red';
+                    ctx.fillStyle = 'red';
+                    ctx.font = "30px Arial";
+                    ctx.fillText("Hello World", 20, 40);
+                    ctx.strokeText("Hello World", 20, 100);
+                </script>                 
+            </li>
+            <br>
+
+            <li>Çizim alanı belirleme ve lineer renk tonları çizdirme:<br><br>
+                <canvas id="myCanvas4" width="175" height="100" style="border:1px solid #00ff1e;"></canvas> 
+                <script>
+                    var c = document.getElementById("myCanvas4");
+                    var ctx = c.getContext("2d");
+
+                    // Create gradient
+                    var grd = ctx.createLinearGradient(0, 0, 200, 0);
+                    grd.addColorStop(0, "red");
+                    grd.addColorStop(1, "white");
+
+                    // Fill with gradient
+                    ctx.fillStyle = grd;
+                    ctx.fillRect(10, 10, 150, 80);
+                </script>                 
+            </li>
+            <br>
+
+            <li>Çizim alanı belirleme ve dairesel renk tonları çizdirme:<br><br>
+                <canvas id="myCanvas5" width="175" height="100" style="border:1px solid #00ff1e;"></canvas> 
+                <script>
+                    var c = document.getElementById("myCanvas5");
+                    var ctx = c.getContext("2d");
+
+                    // Create gradient
+                    var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+                    grd.addColorStop(0, "red");
+                    grd.addColorStop(1, "white");
+
+                    // Fill with gradient
+                    ctx.fillStyle = grd;
+                    ctx.fillRect(10, 10, 150, 80);
+                </script>                 
+            </li>
+            <br>
+
+            <li>Çizim alanı belirleme ve bir resmi oraya çizdirme:<br><br>
+                <img id="scream" src="resources/img_the_scream.jpg" alt="The Scream" width="220" height="277"> &nbsp;&nbsp;&nbsp;>>&nbsp;&nbsp;&nbsp;
+
+                <canvas id="myCanvas6" width="240" height="300" style="border:1px solid #00ff1e;">Tarayıcınız HTML/Canvas Özelliğini Desteklemiyor!</canvas> 
+                <p><button style="color: black;" onclick="myCanvas6()">Çizdir</button></p>
+                <script>
+                    function myCanvas6() {
+                    var c = document.getElementById("myCanvas6");
+                    var ctx = c.getContext("2d");
+                    var img = document.getElementById("scream");
+                    ctx.drawImage(img,10,10);
+                    }
+                </script>                 
+            </li>
+        </ul> 
     </div>
 
     <div>
-        <p><b><u>Örnek #19:</u></b> ... </p>  
+        <p><b><u>Örnek #19:</u></b> HTML Grafikleri (SVG: Scalable Vector Graphics) <br><br>
+            SVG, XML dosya formatı içinde 2D grafiklerin tanımlanmasını sağlayan bir dildir. Her element SVG DOM içerisindedir. <br>
+            Bunlara JavaScript event handler'ları eklenebilir. Her çizilmiş şekil bir obje olarak ele alınır. Bu çizimlerin <br>
+            herhangi bir özelliği değişirse tarayıcı tekrar görüntüyü oluşturur (render)   
+        </p>
+
+        <ul>
+            <li>Daire çizdirme: <br><br>
+                <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                </svg>
+            </li>
+            <br>
+
+            <li>Dikdörtgen çizdirme: <br><br>
+                <svg width="400" height="100">
+                    <rect width="400" height="100" style="fill:rgb(0,0,255); stroke-width:10; stroke:rgb(4, 255, 0)" />
+                </svg>
+            </li>
+            <br>
+
+            <li>Köşeli Yuvarlanmış Dikdörtgen çizdirme: <br><br>
+                <svg width="400" height="180">
+                    <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+                    style="fill:red; stroke:rgb(0, 255, 30); stroke-width:5; opacity:0.5" />
+                </svg>
+            </li>
+            <br>
+
+            <li>Yıldız çizdirme: <br><br>
+                <svg width="300" height="200">
+                    <polygon points="100,10 40,198 190,78 10,78 160,198"
+                    style="fill:lime; stroke:purple; stroke-width:5; fill-rule:evenodd;" />
+                </svg>
+            </li>
+            <br>
+
+            <li>Logo çizdirme: <br><br>
+                <svg height="130" width="500">
+                    <defs>
+                      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                      </linearGradient>
+                    </defs>
+                    <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+                    <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+                    Tarayıcınızın SVG desteği yok!
+                  </svg>
+            </li>
+            <br>
+
+        </ul>
+
     </div>
 
     <div>
-        <p><b><u>Örnek #20:</u></b> ... </p>  
+        <p><b><u>Örnek #20:</u></b> HTML Medya Tipleri </p>
+        <p class="mediaTypes">
+            <img id="mediaTypesImg" src="resources/pic_video.jpg" alt="Formatlar" style="float: left; position: relative;">
+            <span id="mediaTypeExplanation">MP4(MPEG-4), WebM, Flv, Mov, Wmv, Flv... vs gibi bir çok video ve <br>
+                  MIDI, RealAudio, WMA, AAC, WAV, Ogg, MP3, MP4... vs gibi bir çok audio <br>
+                  dosya türü mevcuttur. Sadece Mp4, WebM, Mp3, WAV ve Ogg standart olarak HTML <br>
+                  tarafından desteklenmektedir. (Burasının biçimlendirmesi css dosyasındadır)
+            </span>
+        </p>  
+        <br>
+        <ul>
+            <li>Video Ekleme: (Standart kontrol arayüzü ile) <br>
+                <p>Eğer video tag'ına "autoplay" seçeneğini eklersek video otomatik olarak oynatılacaktır. <br>
+                   "autoplay muted" eklersek sessiz ve otomatik olarak oynatılacaktır. 
+                </p>
+                <video width="320" height="240" controls>
+                    <source src="resources/movie.mp4" type="video/mp4">
+                    <source src="resources/movie.ogg" type="video/ogg">
+                    Tarayıcınız HTML/Video oynatma desteği sunmuyor!
+                  </video>
+
+            </li>
+            <br>
+
+            <li>Video Ekleme: (JavaScript ile) <br><br>
+                <button style="color: black;" onclick="playPause()">Oynat/Duraklat</button> 
+                <button style="color: black;" onclick="makeBig()">Büyük</button>
+                <button style="color: black;" onclick="makeSmall()">Küçük</button>
+                <button style="color: black;" onclick="makeNormal()">Normal</button>
+                <br><br>
+                <video id="video1" width="420">
+                  <source src="resources/mov_bbb.mp4" type="video/mp4">
+                  <source src="resources/mov_bbb.ogg" type="video/ogg">
+                  Tarayıcınız HTML/Video oynatma desteği sunmuyor!
+                </video>
+
+            </li>
+            <br>
+
+            <li>Ses Ekleme: (JavaScript ile) <br><br>
+
+            </li>
+            <br>
+        </ul>
+    </div>
+
+    <div>
+        <p><b><u>Örnek #21:</u></b> ... </p>  
+    </div>
+
+    <div>
+        <p><b><u>Örnek #22:</u></b> ... </p>  
+    </div>
+
+    <div>
+        <p><b><u>Örnek #23:</u></b> ... </p>  
+    </div>
+
+    <div>
+        <p><b><u>Örnek #24:</u></b> ... </p>  
     </div>
 
     <div>
@@ -932,4 +1186,4 @@
 </html>
 
 
-<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html_form_attributes.asp -->
+<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html5_audio.asp -->
