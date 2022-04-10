@@ -1099,7 +1099,7 @@
     </div>
 
     <div>
-        <p><b><u>Örnek #20:</u></b> HTML Medya Tipleri </p>
+        <p><b><u>Örnek #20:</u></b> HTML Medya Tipleri Detalar için <a target="_blank" href="https://www.w3schools.com/tags/ref_av_dom.asp">tıklayınız...</a></p>
         <p class="mediaTypes">
             <img id="mediaTypesImg" src="resources/pic_video.jpg" alt="Formatlar" style="float: left; position: relative;">
             <span id="mediaTypeExplanation">MP4(MPEG-4), WebM, Flv, Mov, Wmv, Flv... vs gibi bir çok video ve <br>
@@ -1119,7 +1119,6 @@
                     <source src="resources/movie.ogg" type="video/ogg">
                     Tarayıcınız HTML/Video oynatma desteği sunmuyor!
                   </video>
-
             </li>
             <br>
 
@@ -1134,19 +1133,38 @@
                   <source src="resources/mov_bbb.ogg" type="video/ogg">
                   Tarayıcınız HTML/Video oynatma desteği sunmuyor!
                 </video>
-
             </li>
             <br>
 
-            <li>Ses Ekleme: (JavaScript ile) <br><br>
+            <li>Video Ekleme: (YouTube) <br>
+                <p>Video linkinin sonuna "?autoplay=1&mute=1" eklenirse otomatik ve sessiz olarak oynatılır. <br>
+                   "?controls=0" eklenirse youtube kontrolleri kullanılamaz.</p>
+                <iframe width="420" height="345" 
+                src="https://www.youtube.com/embed/tgbNymZ7vqY">VIDEO
+                </iframe><br>
+                <p>Playlist linki vermek için "?playlist=...(videoId)...&loop=1" kullanılabilir.</p>
+                <iframe width="420" height="345"
+                src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">VIDEO
+                </iframe>                
+            </li>
+            <br>            
 
+            <li>Ses Ekleme: (Standart kontrol arayüzü ile) <br>
+                <p>Eğer audio tag'ına "autoplay" seçeneğini eklersek ses dosyası otomatik olarak oynatılacaktır. <br>
+                    "autoplay muted" eklersek sessiz ve otomatik olarak oynatılacaktır. 
+                 </p>                
+                <audio controls>
+                    <source src="resources/horse.ogg" type="audio/ogg">
+                    <source src="resources/horse.mp3" type="audio/mpeg">
+                    Tarayıcınız HTML/Audio oynatma desteği sunmuyor!
+                  </audio>
             </li>
             <br>
         </ul>
     </div>
 
     <div>
-        <p><b><u>Örnek #21:</u></b> ... </p>  
+        <p><b><u>Örnek #21:</u></b> HTML APIs </p>  
     </div>
 
     <div>
@@ -1186,4 +1204,4 @@
 </html>
 
 
-<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html5_audio.asp -->
+<!-- DEVAM EDİLECEK: https://www.w3schools.com/html/html5_geolocation.asp -->
